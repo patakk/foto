@@ -75,6 +75,9 @@ $(document).ready(function(){
     navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
             video.srcObject = stream;
+            video.onloadedmetadata = function(e) {
+              video.play();
+            };
         });
 
     click_button.addEventListener('click', function() {
