@@ -15,11 +15,11 @@ function requestSave(){
             method : 'POST',
             url : '/foto/save_info',
             success: function(resp) {
-                const newDiv = document.createElement("div");
+                /*const newDiv = document.createElement("div");
                 const newContent = document.createTextNode("hello " + resp["name"] + " " + resp["w"] + " " + resp["h"]);
                 newDiv.appendChild(newContent);
                 const currentDiv = document.getElementById("rootElement");
-                currentDiv.appendChild(newDiv)
+                currentDiv.appendChild(newDiv)*/
 
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);
@@ -58,6 +58,25 @@ $(document).ready(function(){
  
     document.getElementById('save-label').onmouseup = saveOnMouseUp;
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
+
+
+    let camera_button = document.querySelector("#start-camera");
+    let video = document.querySelector("#video");
+    let click_button = document.querySelector("#click-photo");
+    let canvas = document.querySelector("#canvas");
+
+    camera_button.addEventListener('click', async function() {
+        let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+        video.srcObject = stream;
+    });
+
+    click_button.addEventListener('click', function() {
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        let image_data_url = canvas.toDataURL('image/jpeg');
+
+        // data url of the image
+        console.log(image_data_url);
+    });
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
