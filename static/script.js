@@ -81,6 +81,15 @@ $(document).ready(function(){
         });
 
     click_button.addEventListener('click', function() {
+        
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then((stream) => {
+            video.srcObject = stream;
+            video.onloadedmetadata = function(e) {
+            video.play();
+            };
+        });
+
         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
         let image_data_url = canvas.toDataURL('image/jpeg');
 
