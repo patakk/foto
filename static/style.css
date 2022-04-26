@@ -1,0 +1,80 @@
+body {
+    font-family: "Roboto Mono", sans-serif;
+    background: #111111;
+    margin: 0px;
+}
+
+img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+}
+
+label {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 16px;
+    color: white;
+    background: #101010;
+    border: 2px solid white;
+    border-radius: 0px;
+    /*width: 200px;*/
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    left: 20px;
+    text-align: center;
+    position: absolute;
+    z-index: +1;
+}
+
+#input-label {
+    top: 20px;
+}
+
+#save-label {
+    top: 100px;
+}
+
+#models-label {
+    top: 180px;
+}
+
+
+#progress {
+    color:white;
+    visibility:hidden
+}
+
+#checkered {
+    background-image: radial-gradient(#333333 20%, transparent 20%),
+    radial-gradient(#333333 20%, transparent 20%);
+    background-color: #111111;
+    background-position: 0 0, 5px 5px;
+    background-size: 10px 10px;
+}
+
+.model_link {
+    color: black;
+    background: #d8d634;
+}
+
+.model_link:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.model_link:active {
+    color: black;
+    background: white;
+    cursor: pointer;
+}
+
+#model-table {
+    position: absolute;
+    top: 280px;
+    left: 20px;
+}
