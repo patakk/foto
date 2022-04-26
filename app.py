@@ -14,7 +14,7 @@ app = Flask(__name__)
 application = app
 
 @app.route('/save_info', methods=['GET', 'POST'])
-def save_model():
+def save_info():
     if request.method == 'POST':
         W = int(request.values['width'])
         H = int(request.values['height'])
