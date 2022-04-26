@@ -60,9 +60,9 @@ $(document).ready(function(){
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
 
-    let video = document.getElementById("player");
-    let click_button = document.getElementById("click-photo");
-    let canvas = document.getElementById("canvas");
+    let video = document.querySelector("#player");
+    let click_button = document.querySelector("#click-photo");
+    let canvas = document.querySelector("#canvas");
     
     const constraints = {
         audio: false,
