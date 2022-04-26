@@ -86,15 +86,14 @@ $(document).ready(function(){
         .then((stream) => {
             video.srcObject = stream;
             video.onloadedmetadata = function(e) {
-            video.play();
+                video.play();
             };
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            let image_data_url = canvas.toDataURL('image/jpeg');
+
+            // data url of the image
+            console.log(image_data_url);
         });
-
-        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-        let image_data_url = canvas.toDataURL('image/jpeg');
-
-        // data url of the image
-        console.log(image_data_url);
     });
 
     //var path = document.getElementById('img').src;
