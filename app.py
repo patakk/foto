@@ -2,10 +2,7 @@ import base64
 import requests
 from flask import Flask, render_template, request, \
                   Response, send_file, redirect, url_for, make_response, jsonify
-import numpy as np
 import uuid
-import cv2
-import requests
 import shutil
 import os
 import glob
