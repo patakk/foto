@@ -5,6 +5,39 @@ function preventBehavior(e) {
 };
 
 
+function requestSave(){
+    $.ajax(
+        {
+            data: {
+                width: window.innerWidth,
+                height: window.innerHeight
+            },
+            method : 'POST',
+            url : '/save_info',
+            success: function(resp) {
+                const newDiv = document.createElement("div");
+                const newContent = document.createTextNode("hello " + resp["name"] + " " + resp["w"] + " " + resp["h"]);
+                newDiv.appendChild(newContent);
+                const currentDiv = document.getElementById("main");
+                currentDiv.appendChild(newDiv)
+
+                //var table = document.getElementById("model-table");
+                //var row = table.insertRow(0);
+                //var cell = row.insertCell(0);
+                //cell.innerHTML = "<div onmouseup=\"modelLinkOnMouseUp(event)\" class=\"model_link\" id=" + resp["name"] + ">" + resp["name"] + "</div>";
+
+            },
+            progress: function(e) {
+                console.log(e);
+            },
+            fail: function(resp) {
+                console.log("fail")
+            }
+        }
+    );
+}
+
+
 function saveOnMouseDown(){
     el = document.getElementById( "save-label");
     el.style.background = "#FFFFFF";
