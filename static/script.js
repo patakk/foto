@@ -18,7 +18,7 @@ function requestSave(){
                 const newDiv = document.createElement("div");
                 const newContent = document.createTextNode("hello " + resp["name"] + " " + resp["w"] + " " + resp["h"]);
                 newDiv.appendChild(newContent);
-                const currentDiv = document.getElementById("root");
+                const currentDiv = document.getElementById("rootElement");
                 currentDiv.appendChild(newDiv)
 
                 //var table = document.getElementById("model-table");
@@ -39,7 +39,7 @@ function requestSave(){
 
 
 function saveOnMouseDown(){
-    el = document.getElementById( "save-label");
+    el = document.getElementById("save-label");
     el.style.background = "#FFFFFF";
     el.style.color = "#101010";
 }
