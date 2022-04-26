@@ -13,7 +13,7 @@ function requestSave(){
                 height: window.innerHeight
             },
             method : 'POST',
-            url : '/save_info',
+            url : '/foto/save_info',
             success: function(resp) {
                 const newDiv = document.createElement("div");
                 const newContent = document.createTextNode("hello " + resp["name"] + " " + resp["w"] + " " + resp["h"]);
