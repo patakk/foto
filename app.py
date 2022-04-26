@@ -13,6 +13,14 @@ import glob
 app = Flask(__name__)
 application = app
 
+@app.route('/save_info', methods=['GET', 'POST'])
+def save_info():
+    if request.method == 'POST':
+        W = int(request.values['width'])
+        H = int(request.values['height'])
+        return jsonify({'name': 'h0ho0', 'w': W*2, 'h': H*2})
+
+
 @app.route("/")
 def hello():
     return render_template('index.html')
