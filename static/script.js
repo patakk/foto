@@ -65,6 +65,9 @@ $(document).ready(function(){
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
 
+    function update(stream) {
+        document.querySelector('#player').src = stream.url;
+    }
 
 
     //var path = document.getElementById('img').src;
