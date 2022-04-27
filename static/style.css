@@ -42,8 +42,12 @@ video {
     top: 0px;
     margin: 0px;
 }
+
 #message {
     position: absolute;
     left: 500px;
     z-index: +1000;
+}
+
+#canvas {
 }
