@@ -49,7 +49,7 @@ function handleEnd(){
     var el = document.getElementById("save-label");
     el.style.background = "#101010";
     el.style.color = "#FFFFFF"; 
-
+    requestSave("afsas");
     Webcam.snap( function(data_uri) {
         requestSave(data_uri);
     } );
