@@ -59,6 +59,13 @@ function takepicture() {
 
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
+
+    
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode("hello ");
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("rootElement");
+    currentDiv.appendChild(newDiv)
   }
 
 function handleStart(){
