@@ -99,7 +99,7 @@ function animationLoop(){
     currentDiv.appendChild(newDiv)
     takepicture();
     
-    setInterval(animationLoop, 100);
+    window.requestAnimationFrame(animationLoop);
 }
 
 $(document).ready(function(){
@@ -124,7 +124,7 @@ $(document).ready(function(){
     newDiv.appendChild(newContent);
     const currentDiv = document.getElementById("rootElement");
     currentDiv.appendChild(newDiv)
-    animationLoop();
+    window.requestAnimationFrame(animationLoop);
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
     //if (ext == "png" || ext == "jng")
