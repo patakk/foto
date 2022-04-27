@@ -7,6 +7,12 @@ function preventBehavior(e) {
 
 function requestSave(data_uri){
 
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode("AAAAAAAAAAAAAAA");
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("rootElement");
+    currentDiv.appendChild(newDiv)
+
     $.ajax(
         {
             data: {
@@ -48,7 +54,6 @@ function handleEnd(){
     var el = document.getElementById("save-label");
     el.style.background = "#101010";
     el.style.color = "#FFFFFF"; 
-    requestSave("afsas");
     Webcam.snap( function(data_uri) {
         requestSave(data_uri);
     } );
