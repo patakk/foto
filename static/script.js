@@ -49,14 +49,6 @@ function requestSave(data_uri){
 function takepicture() {
     try {
         
-        canvas = document.getElementById('canvas');
-        video = document.querySelector('video');
-        photo = document.getElementById('photo');
-        context = canvas.getContext('2d');
-        var width = window.innerWidth;
-        var height = window.innerWidth*3/4;
-        canvas.width = width;
-        canvas.height = height;
         context.drawImage(video, 0, 0, width, height);
 
         var data = canvas.toDataURL('image/png');
@@ -115,6 +107,12 @@ $(document).ready(function(){
     });
     Webcam.attach( '#player' );
 
+    canvas = document.getElementById('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerWidth*3/4;
+    context = canvas.getContext('2d');
+    video = document.querySelector('video');
+    photo = document.getElementById('photo');
     
     document.getElementById('player').style.opacity = 0;
 
