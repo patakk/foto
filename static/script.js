@@ -65,39 +65,6 @@ $(document).ready(function(){
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
 
-    let videoel = document.querySelector("#player");
-    let click_button = document.querySelector("#click-photo");
-    let canvas = document.querySelector("#canvas");
-    
-    const constraints = {
-        audio: false,
-        video: {
-            width: {
-                min: 1280,
-                ideal: 1920,
-                max: 2560
-            },
-            height: {
-                min: 720,
-                ideal: 1080,
-                max: 1440
-            },
-            facingMode: "environment"
-        }
-    };
-
-    const videoStream = await navigator.mediaDevices.getUserMedia(constraints);
-    videoel.srcObject = videoStream
-
-    click_button.addEventListener('click', function() {
-        
-        canvas.getContext('2d').drawImage(videoel, 0, 0, canvas.width, canvas.height);
-        let image_data_url = canvas.toDataURL('image/jpeg');
-
-        // data url of the image
-        console.log(image_data_url);
-    });
-    
 
 
     //var path = document.getElementById('img').src;
