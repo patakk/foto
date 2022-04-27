@@ -70,7 +70,6 @@ $(document).ready(function(){
     document.getElementById('save-label').onmouseup = saveOnMouseUp;
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
-    
     Webcam.set({
         width: 320,
         height: 240,
