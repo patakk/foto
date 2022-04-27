@@ -17,12 +17,15 @@ function requestSave(data_uri){
     var userName = document.getElementById("fname").value;
     var rollName = document.getElementById("lname").value;
     var filmName = document.getElementById("films").value;
+    var isoValue = document.getElementById("iso").value;
+    var apertureValue = document.getElementById("aperture").value;
+    var shutterValue = document.getElementById("shutterspeed").value;
 
-    const newDiv = document.createElement("div");
-    const newContent = document.createTextNode("hello " + userName + " " + rollName + " " + filmName);
-    newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById("rootElement");
-    currentDiv.appendChild(newDiv)
+    //const newDiv = document.createElement("div");
+    //const newContent = document.createTextNode("hello " + userName + " " + rollName + " " + filmName);
+    //newDiv.appendChild(newContent);
+    //const currentDiv = document.getElementById("rootElement");
+    //currentDiv.appendChild(newDiv)
 
     $.ajax(
         {
@@ -30,7 +33,10 @@ function requestSave(data_uri){
                 image: data_uri,
                 userName: userName,
                 rollName: rollName,
-                filmName: filmName
+                filmName: filmName,
+                isoValue: isoValue,
+                apertureValue: apertureValue,
+                shutterValue: shutterValue
             },
             method : 'POST',
             url : '/foto/save_info',
@@ -136,11 +142,14 @@ function animationLoop(){
     saveLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
 
     form.style.left = width*.125 + "px";
-    form.style.top = height*1.05 + rect["width"] + "px";
+    form.style.top = height*1.05 + rect["height"] + "px";
     form.style.width = width*.75 + "px";
     document.getElementById("fname").style.width = width*.75 - 8 + "px";
     document.getElementById("lname").style.width = width*.75 - 8 + "px";
     document.getElementById("films").style.width = width*.75 - 8 + "px";
+    document.getElementById("iso").style.width = width*.75 - 8 + "px";
+    document.getElementById("shutterspeed").style.width = width*.75 - 8 + "px";
+    document.getElementById("aperture").style.width = width*.75 - 8 + "px";
 
     if(!snap)
         takepicture();

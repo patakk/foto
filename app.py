@@ -20,6 +20,9 @@ def save_info():
         userName = request.values['userName']
         rollName = request.values['rollName']
         filmName = request.values['filmName']
+        isoValue = request.values['isoValue']
+        apertureValue = request.values['apertureValue']
+        shutterValue = request.values['shutterValue']
             
         userDir = './static/{}'.format(userName)
         rollDir = './static/{}/{}'.format(userName, rollName)
@@ -57,7 +60,7 @@ def save_info():
         im = im.resize(newsize)
         im = im.save(imagePath)
 
-        return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
+        #return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
 
 
 @app.route("/")
