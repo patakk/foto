@@ -61,7 +61,7 @@ function takepicture() {
             photo = document.getElementById('photo');
         }
         document.getElementById("message").innerHTML = video.videoWidth + " " + video.videoHeight;
-        context.drawImage(video, 0, -250, 480, 640+250);
+        context.drawImage(video, 0, -460, 480, 640+460);
 
         //var data = canvas.toDataURL('image/png');
         //photo.setAttribute('src', data);
