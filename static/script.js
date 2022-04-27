@@ -128,7 +128,9 @@ if (hasGetUserMedia()) {
 }
 
 function animationLoop(){
-    
+    innerH = window.innerHeight;
+    document.getElementById("rootElement").style.height = innerH + "px";
+
     var width, height, rect;
 
     width = window.innerWidth;
