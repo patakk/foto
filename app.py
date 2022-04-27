@@ -8,7 +8,8 @@ import os
 import re
 import glob
 import json
-
+from PIL import Image
+  
 app = Flask(__name__)
 application = app
 
@@ -38,14 +39,23 @@ def save_info():
             'aperture': "f/1.4"
         }
 
-        with open(os.path.join(rollDir, '{}.json'.format(nframes)), 'w') as f:
-            json.dump(data, f)   
+        jsonPath = os.path.join(rollDir, '{}.json'.format(nframes))
+        with open(jsonPath, 'w') as f:
+            f.write(json.dumps(data, indent=4)) 
         
         image_b64 = request.values['image']
         imgstr = re.search(r'data:image/png;base64,(.*)',image_b64).group(1)
         decoded = base64.b64decode(imgstr)
-        with open(os.path.join(rollDir, '{}.png'.format(nframes)), 'wb') as f:
-            f.write(decoded) 
+        imagePath = os.path.join(rollDir, '{}.png'.format(nframes))
+        with open(imagePath, 'wb') as f:
+            f.write(decoded)
+
+        # open method used to open different extension image file
+        im = Image.open(imagePath)  
+        width, height = im.size
+        newsize = (width, int(width*3/4))
+        im = im.resize(newsize)
+        im = im.save(imagePath)
 
         return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
 
