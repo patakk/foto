@@ -9,6 +9,9 @@ body {
     background-size: 10px 10px;
 }
 
+img{
+    height: 20%;
+}
 
 label {
     font-family: "Roboto Mono", sans-serif;
