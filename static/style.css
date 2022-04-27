@@ -6,7 +6,7 @@ body {
 
 #save-button, #snap-button {
     font-family: "Roboto Mono", sans-serif;
-    font-size: 36px;
+    font-size: 26px;
     color: white;
     background: #101010;
     border: 2px solid white;
@@ -24,7 +24,7 @@ body {
 
 label {
     font-family: "Roboto Mono", sans-serif;
-    font-size: 26px;
+    font-size: 16px;
     color: white;
     background: #101010;
     border: 2px solid white;
