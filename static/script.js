@@ -60,13 +60,12 @@ function takepicture() {
             canvas.style.height = height*.75 + "px";
             canvas.style.left = width*(1-.75)/2 + "px";
             canvas.style.top = height*(1-.75)/2 + "px";
-            snapLabel.style.bottom = window.innerHeight*0.1;
+            snapLabel.style.top = height*1.1;
             snapLabel.style.left = window.innerWidth*0.5;
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');
         }
-        document.getElementById("message").innerHTML = video.videoWidth + " " + video.videoHeight;
         context.drawImage(video, 0, -460, 480, 640+460);
 
         //var data = canvas.toDataURL('image/png');
