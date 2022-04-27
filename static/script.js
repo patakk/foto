@@ -48,10 +48,12 @@ function requestSave(data_uri){
 
 function takepicture() {
     try {
+        var width = window.innerWidth;
+        var height = window.innerWidth*3/4;
         if(!canvas){
             canvas = document.getElementById('canvas');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerWidth*3/4;
+            canvas.width = width;
+            canvas.height = height;
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');
