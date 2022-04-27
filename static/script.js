@@ -11,7 +11,7 @@ function requestSave(data_uri){
     $.ajax(
         {
             data: {
-                image: data_uri
+                image: "data_uri"
             },
             method : 'POST',
             url : '/foto/save_info',
