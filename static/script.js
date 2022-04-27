@@ -148,7 +148,6 @@ $(document).ready(function(){
     saveLabel.addEventListener('touchstart', handleSaveStart);
     saveLabel.addEventListener('touchend', handleSaveEnd);
     
-
     Webcam.set({
         width: 480,
         height: 640,
@@ -156,7 +155,6 @@ $(document).ready(function(){
         jpeg_quality: 90
     });
     Webcam.attach( '#player' );
-
     
     document.getElementById('player').style.opacity = 0;
 
