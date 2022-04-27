@@ -2,6 +2,7 @@ body {
     font-family: "Roboto Mono", sans-serif;
     background: #1124d6;
     margin: 0px;
+    touch-action: manipulation;
 }
 
 #save-button, #snap-button {
