@@ -69,6 +69,7 @@ $(document).ready(function(){
     let click_button = document.querySelector("#click-photo");
     let canvas = document.querySelector("#canvas");
     
+    video.setAttribute('playsinline', true);
     const constraints = {
         audio: false,
         video:
