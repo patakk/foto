@@ -3,6 +3,7 @@ var canvas = null;
 var video = null;
 var photo = null;
 var context = null;
+var snap = false;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -84,7 +85,7 @@ function handleEnd(){
     //Webcam.snap( function(data_uri) {
     //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     //} );
-    takepicture();
+    snap = true;
 }
 
 
@@ -100,7 +101,8 @@ if (hasGetUserMedia()) {
 
 function animationLoop(){
     
-    takepicture();
+    if(!snap)
+        takepicture();
     
     window.requestAnimationFrame(animationLoop);
 }
