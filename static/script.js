@@ -47,20 +47,24 @@ function requestSave(data_uri){
 }
 
 function takepicture() {
-    canvas = document.getElementById('canvas');
-    video = document.querySelector('video');
-    photo = document.getElementById('photo');
-    context = canvas.getContext('2d');
-    var width = window.innerWidth;
-    var height = window.innerWidth*3/4;
-    canvas.width = width;
-    canvas.height = height;
-    context.drawImage(video, 0, 0, width, height);
+    try {
+        
+        canvas = document.getElementById('canvas');
+        video = document.querySelector('video');
+        photo = document.getElementById('photo');
+        context = canvas.getContext('2d');
+        var width = window.innerWidth;
+        var height = window.innerWidth*3/4;
+        canvas.width = width;
+        canvas.height = height;
+        context.drawImage(video, 0, 0, width, height);
 
-    var data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
-
-    
+        var data = canvas.toDataURL('image/png');
+        photo.setAttribute('src', data);
+    }
+    catch(err) {
+        document.getElementById("message").innerHTML = err.message;
+    }
   }
 
 function handleStart(){
@@ -92,12 +96,7 @@ if (hasGetUserMedia()) {
 
 function animationLoop(){
     
-    const newDiv = document.createElement("div");
-    const newContent = document.createTextNode("hellosfafasfasfasfasfasfasf");
-    newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById("rootElement");
-    currentDiv.appendChild(newDiv)
-    //takepicture();
+    takepicture();
     
     window.requestAnimationFrame(animationLoop);
 }
@@ -119,11 +118,6 @@ $(document).ready(function(){
     
     document.getElementById('player').style.opacity = 0;
 
-    const newDiv = document.createElement("div");
-    const newContent = document.createTextNode("hello ");
-    newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById("rootElement");
-    currentDiv.appendChild(newDiv)
     window.requestAnimationFrame(animationLoop);
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
