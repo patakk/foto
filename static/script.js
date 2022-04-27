@@ -5,7 +5,7 @@ function preventBehavior(e) {
     e.preventDefault(); 
 };
 
-function requestSave(){
+function requestSave(data_uri){
 
 
     $.ajax(
