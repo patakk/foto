@@ -1,9 +1,16 @@
 
 
+const constraints = {
+    audio: false,
+    video:
+    {
+        facingMode: { exact: "environment" }
+    }
+}
+
 function preventBehavior(e) {
     e.preventDefault(); 
 };
-
 
 function requestSave(){
     $.ajax(
@@ -52,6 +59,16 @@ function saveOnMouseUp(){
     requestSave()
 }
 
+function animLoop(){
+
+    navigator.mediaDevices.getUserMedia(constraints)
+        .then((stream) => {
+            video.srcObject = stream;
+        });
+
+    setInterval(animLoop, 33);
+}
+
 
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
@@ -64,21 +81,8 @@ $(document).ready(function(){
     let click_button = document.querySelector("#click-photo");
     let canvas = document.querySelector("#canvas");
     
-    const constraints = {
-        audio: false,
-        video:
-        {
-          facingMode: { exact: "environment" }
-        }
-      }
 
-    navigator.mediaDevices.getUserMedia(constraints)
-        .then((stream) => {
-            video.srcObject = stream;
-            video.onloadedmetadata = function(e) {
-              video.play();
-            };
-        });
+    animLoop();
 
     click_button.addEventListener('click', function() {
         
@@ -88,13 +92,15 @@ $(document).ready(function(){
             video.onloadedmetadata = function(e) {
                 video.play();
             };
-            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-            let image_data_url = canvas.toDataURL('image/jpeg');
-
-            // data url of the image
-            console.log(image_data_url);
         });
+        
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        let image_data_url = canvas.toDataURL('image/jpeg');
+
+        // data url of the image
+        console.log(image_data_url);
     });
+    
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
