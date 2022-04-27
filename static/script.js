@@ -54,6 +54,8 @@ function saveOnMouseUp(){
 
 function animLoop(){
 
+    let video = document.querySelector("#player");
+
     const constraints = {
         audio: false,
         video:
