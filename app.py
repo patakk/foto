@@ -13,9 +13,10 @@ application = app
 @app.route('/save_info', methods=['GET', 'POST'])
 def save_info():
     if request.method == 'POST':
-        W = int(request.values['width'])
-        H = int(request.values['height'])
-        return jsonify({'name': 'h0ho0', 'w': W*2, 'h': H*2})
+        image = request['image']
+        with open("static/aaaa.png", "wb") as f:
+            f.write(base64.decodebytes(image))
+        return jsonify({'name': image, 'w': 111, 'h': 222})
 
 
 @app.route("/")

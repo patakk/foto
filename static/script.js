@@ -6,11 +6,12 @@ function preventBehavior(e) {
 };
 
 function requestSave(){
+
+
     $.ajax(
         {
             data: {
-                width: window.innerWidth,
-                height: window.innerHeight
+                image: data_uri
             },
             method : 'POST',
             url : '/foto/save_info',
@@ -38,18 +39,20 @@ function requestSave(){
 }
 
 
-function saveOnMouseDown(){
-    el = document.getElementById("save-label");
+function handleStart(){
+    el = document.getElementById( "save-label");
     el.style.background = "#FFFFFF";
     el.style.color = "#101010";
 }
 
-function saveOnMouseUp(){
+function handleEnd(){
     var el = document.getElementById("save-label");
     el.style.background = "#101010";
     el.style.color = "#FFFFFF"; 
 
-    requestSave()
+    Webcam.snap( function(data_uri) {
+        requestSave(data_uri);
+    } );
 }
 
 
@@ -67,8 +70,8 @@ if (hasGetUserMedia()) {
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
  
-    document.getElementById('save-label').onmouseup = saveOnMouseUp;
-    document.getElementById('save-label').onmousedown = saveOnMouseDown;
+    document.getElementById('save-label').addEventListener('touchstart', handleStart);
+    document.getElementById('save-label').addEventListener('touchend', handleEnd);
 
     Webcam.set({
         width: window.innerWidth,
