@@ -132,6 +132,7 @@ function animationLoop(){
     form.style.width = width*.75 + "px";
     document.getElementById("fname").style.width = width*.75 - 8 + "px";
     document.getElementById("lname").style.width = width*.75 - 8 + "px";
+    document.getElementById("films").style.width = width*.75 - 8 + "px";
 
     if(!snap)
         takepicture();
