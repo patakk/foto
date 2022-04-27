@@ -37,5 +37,11 @@ label {
 }
 
 video {
-    position: fixed;
+    position: aboslute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
 }
+
+form { margin-top: 15px; }
+form > input { margin-right: 15px; }
