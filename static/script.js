@@ -55,8 +55,10 @@ function takepicture() {
             canvas = document.getElementById('canvas');
             canvas.width = 480;
             canvas.height = 640;
-            canvas.style.width = width*.75+"px";
-            canvas.style.height = height*.75+"px";
+            canvas.style.width = width*.75 + "px";
+            canvas.style.height = height*.75 + "px";
+            canvas.style.left = width*(1-.75)/2 + "px";
+            canvas.style.top = height*(1-.75)/2 + "px";
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');

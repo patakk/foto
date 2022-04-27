@@ -50,4 +50,5 @@ video {
 }
 
 #canvas {
+    position: absolute;
 }
