@@ -55,6 +55,8 @@ video {
 }
 
 input[type=text] {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 36px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
