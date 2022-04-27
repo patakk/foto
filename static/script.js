@@ -60,8 +60,6 @@ function takepicture() {
             canvas.style.height = height*.75 + "px";
             canvas.style.left = width*(1-.75)/2 + "px";
             canvas.style.top = height*(1-.75)/2 + "px";
-            snapLabel.style.top = height*1.1;
-            snapLabel.style.left = window.innerWidth*0.5 - snapLabel.style.width/2;
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');
@@ -94,6 +92,8 @@ function handleEnd(){
         snapLabel.innerHTML = 'SNAP!'
     }
     snap = !snap;
+    snapLabel.style.top = height*1.1;
+    snapLabel.style.left = window.innerWidth*0.5 - snapLabel.style.width/2;
 }
 
 
