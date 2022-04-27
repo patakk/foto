@@ -35,7 +35,7 @@ video {
     margin: 0px;
 }
 
-.player {
+#player {
     position: absolute;
     left: 0px;
     top: 0px;
