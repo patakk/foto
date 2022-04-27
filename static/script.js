@@ -6,6 +6,7 @@ var context = null;
 var snap = false;
 var snapLabel = null;
 var saveLabel = null;
+var form = null;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -126,6 +127,9 @@ function animationLoop(){
     rect = saveLabel.getBoundingClientRect();
     saveLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
 
+    form.style.left = "0px";
+    form.style.top = height*1.1 + "px";
+
     if(!snap)
         takepicture();
     
@@ -135,6 +139,7 @@ function animationLoop(){
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
     
+    form = document.getElementById("form");
     snapLabel = document.getElementById("snap-button");
     snapLabel.addEventListener('touchstart', handleSnapStart);
     snapLabel.addEventListener('touchend', handleSnapEnd);
