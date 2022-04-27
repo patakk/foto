@@ -45,10 +45,9 @@ function requestSave(data_uri){
             success: function(resp) {
 
                 if(resp["message"]){
-                    //saveLabel.style.background = "#18FF18";
-                    //saveLabel.style.color = "#000000";
-                    //saveLabel.innerHTML = "SAVED!";
-                    timer = 3000;
+                    saveLabel.style.background = "#18FF18";
+                    saveLabel.style.color = "#000000";
+                    saveLabel.innerHTML = "SAVED!";
                 }
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);
@@ -98,9 +97,10 @@ function handleSnapStart(){
 }
 
 function handleSaveStart(){
-    saveLabel.style.background = "#106010";
+    saveLabel.style.background = "#FF2020";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "SAVING...";
+    timer = 3000;
 }
 
 function handleSnapEnd(){
@@ -119,7 +119,7 @@ function handleSnapEnd(){
 }
 
 function handleSaveEnd(){
-    saveLabel.style.background = "#106010";
+    saveLabel.style.background = "#FF2020";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "SAVING...";
     requestSave(canvas.toDataURL('image/png'));
@@ -143,9 +143,9 @@ function animationLoop(){
     var width, height, rect;
 
     if(timer < 0){
-        //saveLabel.style.background = "#101010";
-        //saveLabel.style.color = "#FFFFFF"; 
-        //saveLabel.innerHTML = "SAVE";
+        saveLabel.style.background = "#101010";
+        saveLabel.style.color = "#FFFFFF"; 
+        saveLabel.innerHTML = "SAVE";
     }
     else{
         timer = timer - 33;
