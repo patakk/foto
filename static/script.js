@@ -130,8 +130,8 @@ function animationLoop(){
     form.style.left = width*.125 + "px";
     form.style.top = height*1.05 + rect["width"] + "px";
     form.style.width = width*.75 + "px";
-    document.getElementById("fname").style.width = width*.75 - 4 + "px";
-    document.getElementById("lname").style.width = width*.75 - 4 + "px";
+    document.getElementById("fname").style.width = width*.75 - 14 + "px";
+    document.getElementById("lname").style.width = width*.75 - 14 + "px";
 
     if(!snap)
         takepicture();
