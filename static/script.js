@@ -72,18 +72,25 @@ $(document).ready(function(){
     video.setAttribute('playsinline', true);
     const constraints = {
         audio: false,
-        video:
-        {
-            facingMode: { exact: "environment" }
+        video: {
+            width: {
+                min: 1280,
+                ideal: 1920,
+                max: 2560
+            },
+            height: {
+                min: 720,
+                ideal: 1080,
+                max: 1440
+            },
+            facingMode: {
+                exact: "environment" 
+            }
         }
     }
 
-    var getMedia = navigator.mediaDevices.getUserMedia || navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
-
-    getMedia(constraints)
-        .then((stream) => {
-            video.srcObject = stream;
-        });
+    const videoStream = await navigator.mediaDevices.getUserMedia(constraints)
+    video.srcObject = videoStream
 
     click_button.addEventListener('click', function() {
         
