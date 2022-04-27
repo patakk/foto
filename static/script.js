@@ -8,6 +8,7 @@ var snapLabel = null;
 var saveLabel = null;
 var form = null;
 var innerH = null;
+var timer = 0;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -43,6 +44,12 @@ function requestSave(data_uri){
             url : '/foto/save_info',
             success: function(resp) {
 
+                if(resp["message"].localeCompare("SUCCESS")){
+                    saveLabel.style.background = "#18FF18";
+                    saveLabel.style.color = "#EEEEEE";
+                    saveLabel.innerHTML = "SAVED!";
+                    timer = 3000;
+                }
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);
                 //var cell = row.insertCell(0);
@@ -132,6 +139,15 @@ function animationLoop(){
     document.getElementById("rootElement").style.height = innerH + "px";
 
     var width, height, rect;
+
+    if(timer < 0){
+        saveLabel.style.background = "#101010";
+        saveLabel.style.color = "#FFFFFF"; 
+        saveLabel.innerHTML = "SAVE";
+    }
+    else{
+        timer = timer - 33;
+    }
 
     width = window.innerWidth;
     height = window.innerWidth*3/4;
