@@ -86,6 +86,7 @@ $(document).ready(function(){
     Webcam.attach( '#player' );
 
     document.querySelector('video').style.left = window.innerWidth*0.7*.5;
+    document.querySelector('video').style.top = 0;
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
