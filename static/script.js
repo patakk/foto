@@ -109,7 +109,7 @@ function animationLoop(){
     
     var width = window.innerWidth;
     var height = window.innerWidth*3/4;
-    snapLabel.style.top = height*1.1;
+    snapLabel.style.top = height*1.;
     var rect = snapLabel.getBoundingClientRect()
     snapLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
 
