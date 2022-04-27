@@ -66,6 +66,7 @@ video {
     border: 2px solid white;
     border-radius: 0px;
     touch-action: manipulation;
+    width: 100%;
 }
 
 #form {
