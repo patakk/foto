@@ -82,8 +82,6 @@ $(document).ready(function(){
         height: window.innerHeight*16/9*0.7*.2,
         dest_width: 500,
         dest_height: 500,
-		crop_width: window.innerWidth*0.7,
-		crop_height: window.innerWidth*3/4*0.7,
         image_format: 'jpeg',
         jpeg_quality: 90
     });
