@@ -19,7 +19,7 @@ def save_info():
         decoded = base64.b64decode(imgstr)
         #with open('./static/output.png', 'wb') as f:
         #    f.write(decoded)
-        return jsonify({'name': './static/output.pngaaaaa', 'w': 111, 'h': 222})
+        return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
 
 
 @app.route("/")
