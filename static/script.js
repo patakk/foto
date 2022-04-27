@@ -1,12 +1,5 @@
 
 
-const constraints = {
-    audio: false,
-    video:
-    {
-        facingMode: { exact: "environment" }
-    }
-}
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -61,12 +54,20 @@ function saveOnMouseUp(){
 
 function animLoop(){
 
+    const constraints = {
+        audio: false,
+        video:
+        {
+            facingMode: { exact: "environment" }
+        }
+    }
+
     navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
             video.srcObject = stream;
         });
 
-    setInterval(animLoop, 33);
+    //setInterval(animLoop, 33);
 }
 
 
@@ -82,17 +83,7 @@ $(document).ready(function(){
     let canvas = document.querySelector("#canvas");
     
 
-    animLoop();
-
     click_button.addEventListener('click', function() {
-        
-        navigator.mediaDevices.getUserMedia(constraints)
-        .then((stream) => {
-            video.srcObject = stream;
-            video.onloadedmetadata = function(e) {
-                video.play();
-            };
-        });
         
         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
         let image_data_url = canvas.toDataURL('image/jpeg');
@@ -101,6 +92,8 @@ $(document).ready(function(){
         console.log(image_data_url);
     });
     
+
+    animLoop();
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
