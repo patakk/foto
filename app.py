@@ -15,17 +15,37 @@ application = app
 @app.route('/save_info', methods=['GET', 'POST'])
 def save_info():
     if request.method == 'POST':
-        image_b64 = request.values['image']
-        imgstr = re.search(r'data:image/png;base64,(.*)',image_b64).group(1)
-        decoded = base64.b64decode(imgstr)
-        with open('./static/output.png', 'wb') as f:
-            f.write(decoded)
 
         userName = request.values['userName']
         rollName = request.values['rollName']
         filmName = request.values['filmName']
+            
+        userDir = './static/{}'.format(userName)
+        rollDir = './static/{}/{}'.format(userName, rollName)
         
-        #if os.path.exists('./static/{}'.format(userName)):
+        if not os.path.exists(userDir):
+            os.makedirs(userDir)
+        if not os.path.exists(rollDir):
+            os.makedirs(rollDir)
+        
+        frames = os.listdir(rollDir)
+        nframes = len(frames)
+
+        data = {
+            'film': filmName,
+            'iso': 400,
+            'speed': "1/125",
+            'aperture': "f/1.4"
+        }
+
+        with open(os.path.join(rollDir, '{}.json'.format(nframes)), 'w') as f:
+            json.dump(data, f)   
+        
+        image_b64 = request.values['image']
+        imgstr = re.search(r'data:image/png;base64,(.*)',image_b64).group(1)
+        decoded = base64.b64decode(imgstr)
+        with open(os.path.join(rollDir, '{}.png'.format(nframes)), 'wb') as f:
+            f.write(decoded) 
 
         return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
 
