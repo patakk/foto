@@ -52,8 +52,10 @@ function takepicture() {
         var height = window.innerWidth*3/4;
         if(!canvas){
             canvas = document.getElementById('canvas');
-            canvas.width = width;
-            canvas.height = height;
+            canvas.width = 480;
+            canvas.height = 640;
+            canvas.style.width = width;
+            canvas.style.height = height;
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');
