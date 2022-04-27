@@ -142,9 +142,9 @@ function animationLoop(){
     form.style.left = width*.125 + "px";
     form.style.top = snapRect["bottom"] + window.innerHeight*0.05 + "px";
     form.style.width = width*.75 + "px";
-    formRect = form.getBoundingClientRect();
+    var formRect = form.getBoundingClientRect();
 
-    saveRect = saveLabel.getBoundingClientRect();
+    var saveRect = saveLabel.getBoundingClientRect();
     saveLabel.style.top = formRect['bottom']*1. + window.innerHeight*0.05 + "px";
     saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
 
