@@ -1,12 +1,7 @@
 body {
     font-family: "Roboto Mono", sans-serif;
-    background: #111111;
+    background: #1124d6;
     margin: 0px;
-    background-image: radial-gradient(#333333 20%, transparent 20%),
-    radial-gradient(#333333 20%, transparent 20%);
-    background-color: #111111;
-    background-position: 0 0, 5px 5px;
-    background-size: 10px 10px;
 }
 
 label {
