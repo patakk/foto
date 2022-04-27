@@ -85,7 +85,13 @@ function handleEnd(){
     //Webcam.snap( function(data_uri) {
     //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     //} );
-    snap = true;
+    if(snap){
+        el.innerHTML = 'GET NEW PHOTO'
+    }
+    else{
+        el.innerHTML = 'SNAP!'
+    }
+    snap = !snap;
 }
 
 
