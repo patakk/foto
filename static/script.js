@@ -80,13 +80,12 @@ $(document).ready(function(){
     Webcam.set({
         width: window.innerWidth*0.7,
         height: window.innerHeight*16/9*0.7,
-		crop_width: window.innerWidth,
-		crop_height: window.innerWidth*3/4,
+		crop_width: window.innerWidth*0.7,
+		crop_height: window.innerWidth*3/4*0.7,
         image_format: 'jpeg',
         jpeg_quality: 90
     });
     Webcam.attach( '#player' );
-
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
