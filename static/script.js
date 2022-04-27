@@ -88,6 +88,11 @@ if (hasGetUserMedia()) {
     alert("getUserMedia() is not supported by your browser");
 }
 
+function animationLoop(){
+    takepicture();
+    
+    setInterval(animationLoop, 100);
+}
 
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
@@ -105,6 +110,8 @@ $(document).ready(function(){
 
     
     document.getElementById('player').style.opacity = 0;
+
+    animationLoop();
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
     //if (ext == "png" || ext == "jng")
