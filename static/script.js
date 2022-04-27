@@ -69,7 +69,6 @@ $(document).ready(function(){
     let click_button = document.querySelector("#click-photo");
     let canvas = document.querySelector("#canvas");
     
-    video.setAttribute('playsinline', true);
     const constraints = {
         audio: false,
         video: {
@@ -83,14 +82,13 @@ $(document).ready(function(){
                 ideal: 1080,
                 max: 1440
             },
-            facingMode: {
-                exact: "environment" 
-            }
+            facingMode: "environment"
         }
     }
 
     const videoStream = await navigator.mediaDevices.getUserMedia(constraints)
     video.srcObject = videoStream
+    video.setAttribute('playsinline', true);
 
     click_button.addEventListener('click', function() {
         
