@@ -41,3 +41,6 @@ video {
     top: 0px;
     margin: 0px;
 }
+#player {
+    z-index: +1000;
+}
