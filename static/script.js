@@ -93,7 +93,7 @@ if (hasGetUserMedia()) {
 function animationLoop(){
     
     const newDiv = document.createElement("div");
-    const newContent = document.createTextNode("hello ");
+    const newContent = document.createTextNode("hellosfafasfasfasfasfasfasf");
     newDiv.appendChild(newContent);
     const currentDiv = document.getElementById("rootElement");
     currentDiv.appendChild(newDiv)
