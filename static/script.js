@@ -45,9 +45,9 @@ function requestSave(data_uri){
             success: function(resp) {
 
                 if(resp["message"]){
-                    saveLabel.style.background = "#18FF18";
-                    saveLabel.style.color = "#000000";
-                    saveLabel.innerHTML = "SAVED!";
+                    //saveLabel.style.background = "#18FF18";
+                    //saveLabel.style.color = "#000000";
+                    //saveLabel.innerHTML = "SAVED!";
                     timer = 3000;
                 }
                 //var table = document.getElementById("model-table");
