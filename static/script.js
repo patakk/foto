@@ -128,7 +128,7 @@ function animationLoop(){
     saveLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
 
     form.style.left = "0px";
-    form.style.top = height*1.1 + "px";
+    form.style.top = height*1.1 + rect + "px";
 
     if(!snap)
         takepicture();
