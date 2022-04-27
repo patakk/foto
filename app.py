@@ -17,8 +17,8 @@ def save_info():
         image_b64 = request.values['image']
         imgstr = re.search(r'data:image/png;base64,(.*)',image_b64).group(1)
         decoded = base64.b64decode(imgstr)
-        #with open('./static/output.png', 'wb') as f:
-        #    f.write(decoded)
+        with open('./static/output.png', 'wb') as f:
+            f.write(decoded)
         return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
 
 
