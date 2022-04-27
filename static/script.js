@@ -5,6 +5,7 @@ var photo = null;
 var context = null;
 var snap = false;
 var snapLabel = null;
+var saveLabel = null;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -79,7 +80,7 @@ function handleStart(){
     snapLabel.style.color = "#101010";
 }
 
-function handleEnd(){
+function handleSnapEnd(){
     snapLabel.style.background = "#101010";
     snapLabel.style.color = "#FFFFFF"; 
     //Webcam.snap( function(data_uri) {
@@ -92,6 +93,11 @@ function handleEnd(){
         snapLabel.innerHTML = 'SNAP!'
     }
     snap = !snap;
+}
+
+function handleSaveEnd(){
+    snapLabel.style.background = "#101010";
+    snapLabel.style.color = "#FFFFFF"; 
 }
 
 
@@ -107,11 +113,18 @@ if (hasGetUserMedia()) {
 
 function animationLoop(){
     
-    var width = window.innerWidth;
-    var height = window.innerWidth*3/4;
+    var width, height, rect;
+
+    width = window.innerWidth;
+    height = window.innerWidth*3/4;
+
     snapLabel.style.top = height*1.;
-    var rect = snapLabel.getBoundingClientRect()
+    rect = snapLabel.getBoundingClientRect();
     snapLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
+    
+    saveLabel.style.bottom = window.innerHeight*.1 + "px";
+    rect = saveLabel.getBoundingClientRect();
+    saveLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
 
     if(!snap)
         takepicture();
@@ -122,10 +135,14 @@ function animationLoop(){
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
     
-    snapLabel = document.getElementById("save-label");
-
+    snapLabel = document.getElementById("snap-button");
     snapLabel.addEventListener('touchstart', handleStart);
-    snapLabel.addEventListener('touchend', handleEnd);
+    snapLabel.addEventListener('touchend', handleSnapEnd);
+    
+    saveLabel = document.getElementById("save-button");
+    snapLabel.addEventListener('touchstart', handleStart);
+    snapLabel.addEventListener('touchend', handleSaveEnd);
+    
 
     Webcam.set({
         width: 480,
