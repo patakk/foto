@@ -98,8 +98,9 @@ function handleSnapStart(){
 }
 
 function handleSaveStart(){
-    saveLabel.style.background = "#FFFFFF";
-    saveLabel.style.color = "#101010";
+    saveLabel.style.background = "#106010";
+    saveLabel.style.color = "#FFFFFF"; 
+    saveLabel.innerHTML = "SAVING...";
 }
 
 function handleSnapEnd(){
