@@ -58,7 +58,7 @@ function takepicture() {
             video = document.querySelector('video');
             photo = document.getElementById('photo');
         }
-        document.getElementById("message").innerHTML = video.width + " " + video.height;
+        document.getElementById("message").innerHTML = video.videoWidth + " " + video.videoHeight;
         context.drawImage(video, 0, 0, 300, 300);
 
         var data = canvas.toDataURL('image/png');
