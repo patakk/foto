@@ -61,11 +61,6 @@ function takepicture() {
     photo.setAttribute('src', data);
 
     
-    const newDiv = document.createElement("div");
-    const newContent = document.createTextNode("hello ");
-    newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById("rootElement");
-    currentDiv.appendChild(newDiv)
   }
 
 function handleStart(){
@@ -96,6 +91,12 @@ if (hasGetUserMedia()) {
 }
 
 function animationLoop(){
+    
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode("hello ");
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("rootElement");
+    currentDiv.appendChild(newDiv)
     takepicture();
     
     setInterval(animationLoop, 100);
