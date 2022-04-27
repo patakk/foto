@@ -3,7 +3,6 @@
 const canvas = null;
 const video = null;
 const photo = null;
-var context = null;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -48,6 +47,11 @@ function requestSave(data_uri){
 }
 
 function takepicture() {
+    var context = canvas.getContext('2d');
+    var width = window.innerWidth;
+    var height = window.innerWidth*3/4;
+    canvas.width = width;
+    canvas.height = height;
     context.drawImage(video, 0, 0, width, height);
 
     var data = canvas.toDataURL('image/png');
@@ -91,12 +95,6 @@ $(document).ready(function(){
     canvas = document.getElementById('canvas');
     video = document.querySelector('video');
     photo = document.getElementById('photo');
-    context = canvas.getContext('2d');
-
-    var width = window.innerWidth;
-    var height = window.innerWidth*3/4;
-    canvas.width = width;
-    canvas.height = height;
 
     Webcam.set({
         width: 480,
@@ -106,6 +104,7 @@ $(document).ready(function(){
     });
     Webcam.attach( '#player' );
 
+    
     document.getElementById('player').style.opacity = 0;
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
