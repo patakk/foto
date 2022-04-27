@@ -43,6 +43,20 @@ function requestSave(data_uri){
     );
 }
 
+function takepicture() {
+    const canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var width = window.innerWidth;
+    var height = window.innerWidth*3/4;
+    const video = document.querySelector('video');
+    canvas.width = width;
+    canvas.height = height;
+    context.drawImage(video, 0, 0, width, height);
+
+    var data = canvas.toDataURL('image/png');
+    const photo = document.getElementById('photo');
+    photo.setAttribute('src', data);
+  }
 
 function handleStart(){
     el = document.getElementById( "save-label");
@@ -54,9 +68,10 @@ function handleEnd(){
     var el = document.getElementById("save-label");
     el.style.background = "#101010";
     el.style.color = "#FFFFFF"; 
-    Webcam.snap( function(data_uri) {
-        document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
-    } );
+    //Webcam.snap( function(data_uri) {
+    //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+    //} );
+    takepicture();
 }
 
 
