@@ -70,7 +70,15 @@ $(document).ready(function(){
     document.getElementById('save-label').onmouseup = saveOnMouseUp;
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
-
+    const constraints = {
+        video: true,
+    };
+    
+    const video = document.querySelector("#player");
+    
+    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        video.srcObject = stream;
+    });
 
 
     //var path = document.getElementById('img').src;
