@@ -85,6 +85,8 @@ $(document).ready(function(){
     });
     Webcam.attach( '#player' );
 
+    
+    document.getElementById('save-label').style.visibility = "hidden";
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
     //if (ext == "png" || ext == "jng")
