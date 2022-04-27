@@ -97,7 +97,7 @@ function animationLoop(){
     newDiv.appendChild(newContent);
     const currentDiv = document.getElementById("rootElement");
     currentDiv.appendChild(newDiv)
-    takepicture();
+    //takepicture();
     
     window.requestAnimationFrame(animationLoop);
 }
