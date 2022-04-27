@@ -55,7 +55,7 @@ function handleEnd(){
     el.style.background = "#101010";
     el.style.color = "#FFFFFF"; 
     Webcam.snap( function(data_uri) {
-        requestSave(data_uri);
+        document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     } );
 }
 
