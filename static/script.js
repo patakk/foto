@@ -63,8 +63,8 @@ function takepicture() {
         document.getElementById("message").innerHTML = video.videoWidth + " " + video.videoHeight;
         context.drawImage(video, 0, 0, 480, 640);
 
-        var data = canvas.toDataURL('image/png');
-        photo.setAttribute('src', data);
+        //var data = canvas.toDataURL('image/png');
+        //photo.setAttribute('src', data);
     }
     catch(err) {
         document.getElementById("message").innerHTML = err.message;
