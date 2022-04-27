@@ -78,14 +78,18 @@ $(document).ready(function(){
     document.getElementById('save-label').addEventListener('touchend', handleEnd);
 
     Webcam.set({
-        width: window.innerWidth,
-        height: window.innerHeight*16/9,
+        width: window.innerWidth*0.7,
+        height: window.innerHeight*16/9*0.7,
 		crop_width: window.innerWidth,
 		crop_height: window.innerWidth*3/4,
         image_format: 'jpeg',
         jpeg_quality: 90
     });
     Webcam.attach( '#player' );
+
+    const video = document.querySelector('#player');
+    video.style.left = "40px";
+    video.style.top = "240px";
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
