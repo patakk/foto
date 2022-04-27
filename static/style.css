@@ -41,7 +41,7 @@ video {
     top: 0px;
     margin: 0px;
 }
-#player {
+#message {
     position: absolute;
     left: 500px;
     z-index: +1000;
