@@ -7,12 +7,6 @@ function preventBehavior(e) {
 
 function requestSave(data_uri){
 
-    const newDiv = document.createElement("div");
-    const newContent = document.createTextNode("AAAAAAAAAAAAAAA");
-    newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById("rootElement");
-    currentDiv.appendChild(newDiv)
-
     $.ajax(
         {
             data: {
