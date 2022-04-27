@@ -13,12 +13,6 @@ function preventBehavior(e) {
 
 function requestSave(data_uri){
 
-    const newDiv = document.createElement("div");
-    const newContent = document.createTextNode("AAAAAAAAAAAAAAA");
-    newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById("rootElement");
-    currentDiv.appendChild(newDiv)
-
     $.ajax(
         {
             data: {
@@ -103,6 +97,7 @@ function handleSnapEnd(){
 function handleSaveEnd(){
     saveLabel.style.background = "#101010";
     saveLabel.style.color = "#FFFFFF"; 
+    requestSave(canvas.toDataURL('image/png'));
 }
 
 
