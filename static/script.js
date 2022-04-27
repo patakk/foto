@@ -54,14 +54,14 @@ function takepicture() {
             canvas = document.getElementById('canvas');
             canvas.width = 480;
             canvas.height = 640;
-            canvas.style.width = width;
-            canvas.style.height = height;
+            canvas.style.width = width+"px";
+            canvas.style.height = height+"px";
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');
         }
         document.getElementById("message").innerHTML = video.videoWidth + " " + video.videoHeight;
-        context.drawImage(video, 0, 0, 300, 300);
+        context.drawImage(video, 0, 0, 480, 640);
 
         var data = canvas.toDataURL('image/png');
         photo.setAttribute('src', data);
