@@ -4,7 +4,7 @@ body {
     margin: 0px;
 }
 
-label {
+#save-button, #snap-button {
     font-family: "Roboto Mono", sans-serif;
     font-size: 36px;
     color: white;
