@@ -71,8 +71,8 @@ $(document).ready(function(){
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
     Webcam.set({
-        width: 640,
-        height: 1280,
+        width: window.innerWidth,
+        height: window.innerWidth*2/3,
         image_format: 'jpeg',
         jpeg_quality: 90
     });
