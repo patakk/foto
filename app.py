@@ -29,7 +29,7 @@ def save_info():
         if not os.path.exists(rollDir):
             os.makedirs(rollDir)
         
-        frames = os.listdir(rollDir)
+        frames = glob.glob(os.path.join(rollDir, '*.png'))
         nframes = len(frames)
 
         data = {
