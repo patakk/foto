@@ -137,8 +137,8 @@ function animationLoop(){
     rect = snapLabel.getBoundingClientRect();
     snapLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
     
-    saveLabel.style.top = window.innerHeight*.95 + "px";
     rect = saveLabel.getBoundingClientRect();
+    saveLabel.style.top = window.innerHeight*.95 - rect["height"]*.5 + "px";
     saveLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
 
     form.style.left = width*.125 + "px";
