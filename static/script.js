@@ -58,7 +58,7 @@ function takepicture() {
             video = document.querySelector('video');
             photo = document.getElementById('photo');
         }
-        context.drawImage(video, 0, -300, width, height+300);
+        context.drawImage(video, 0, 0, 300, 300);
 
         var data = canvas.toDataURL('image/png');
         photo.setAttribute('src', data);
