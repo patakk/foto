@@ -4,6 +4,7 @@ var video = null;
 var photo = null;
 var context = null;
 var snap = false;
+var snapLabel = null;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -59,6 +60,8 @@ function takepicture() {
             canvas.style.height = height*.75 + "px";
             canvas.style.left = width*(1-.75)/2 + "px";
             canvas.style.top = height*(1-.75)/2 + "px";
+            snapLabel.style.bottom = window.innerHeight*0.1;
+            snapLabel.style.left = window.innerWidth*0.5;
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');
@@ -75,23 +78,21 @@ function takepicture() {
   }
 
 function handleStart(){
-    el = document.getElementById( "save-label");
-    el.style.background = "#FFFFFF";
-    el.style.color = "#101010";
+    snapLabel.style.background = "#FFFFFF";
+    snapLabel.style.color = "#101010";
 }
 
 function handleEnd(){
-    var el = document.getElementById("save-label");
-    el.style.background = "#101010";
-    el.style.color = "#FFFFFF"; 
+    snapLabel.style.background = "#101010";
+    snapLabel.style.color = "#FFFFFF"; 
     //Webcam.snap( function(data_uri) {
     //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     //} );
     if(!snap){
-        el.innerHTML = 'GET NEW PHOTO'
+        snapLabel.innerHTML = 'GET NEW PHOTO'
     }
     else{
-        el.innerHTML = 'SNAP!'
+        snapLabel.innerHTML = 'SNAP!'
     }
     snap = !snap;
 }
@@ -117,9 +118,11 @@ function animationLoop(){
 
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
- 
-    document.getElementById('save-label').addEventListener('touchstart', handleStart);
-    document.getElementById('save-label').addEventListener('touchend', handleEnd);
+    
+    snapLabel = document.getElementById("save-label");
+
+    snapLabel.addEventListener('touchstart', handleStart);
+    snapLabel.addEventListener('touchend', handleEnd);
 
     Webcam.set({
         width: 480,
