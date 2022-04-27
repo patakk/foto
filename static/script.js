@@ -70,16 +70,16 @@ $(document).ready(function(){
     document.getElementById('save-label').onmouseup = saveOnMouseUp;
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
-    const constraints = {
-        video: true,
-    };
     
     const video = document.querySelector("#player");
     
-    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+    const hdConstraints = {
+        video: { width: { min: 1280 }, height: { min: 720 } },
+      };
+      
+    navigator.mediaDevices.getUserMedia(hdConstraints).then((stream) => {
         video.srcObject = stream;
     });
-
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
