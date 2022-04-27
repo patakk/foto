@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, \
 import uuid
 import shutil
 import os
+import re
 import glob
 
 app = Flask(__name__)
@@ -13,9 +14,11 @@ application = app
 @app.route('/save_info', methods=['GET', 'POST'])
 def save_info():
     if request.method == 'POST':
-        image = request.values['image']
-        with open("./static/aaaa.png", "wb") as f:
-            f.write(base64.decodebytes(image))
+        image_b64 = request.values['image']
+        imgstr = re.search(r'data:image/png;base64,(.*)',image_b64).group(1)
+        decoded = base64.b64decode(imgstr)
+        with open('./static/output.png', 'wb') as f:
+            f.write(decoded)
         return jsonify({'name': image, 'w': 111, 'h': 222})
 
 
