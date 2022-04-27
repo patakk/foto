@@ -119,6 +119,11 @@ $(document).ready(function(){
     
     document.getElementById('player').style.opacity = 0;
 
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode("hello ");
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("rootElement");
+    currentDiv.appendChild(newDiv)
     animationLoop();
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
