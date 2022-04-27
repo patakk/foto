@@ -54,21 +54,6 @@ function saveOnMouseUp(){
 
 function animLoop(){
 
-    let video = document.querySelector("#player");
-
-    const constraints = {
-        audio: false,
-        video:
-        {
-            facingMode: { exact: "environment" }
-        }
-    }
-
-    navigator.mediaDevices.getUserMedia(constraints)
-        .then((stream) => {
-            video.srcObject = stream;
-            setInterval(animLoop, 33);
-        });
 
 }
 
@@ -84,6 +69,20 @@ $(document).ready(function(){
     let click_button = document.querySelector("#click-photo");
     let canvas = document.querySelector("#canvas");
     
+    const constraints = {
+        audio: false,
+        video:
+        {
+            facingMode: { exact: "environment" }
+        }
+    }
+
+    var getMedia = navigator.mediaDevices.getUserMedia || navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+    getMedia(constraints)
+        .then((stream) => {
+            video.srcObject = stream;
+        });
 
     click_button.addEventListener('click', function() {
         
@@ -95,7 +94,6 @@ $(document).ready(function(){
     });
     
 
-    animLoop();
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
