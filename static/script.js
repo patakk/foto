@@ -14,19 +14,27 @@ function preventBehavior(e) {
 
 function requestSave(data_uri){
 
+    var userName = document.getElementById("fname").value;
+    var rollName = document.getElementById("lname").value;
+    var filmName = document.getElementById("films").value;
+
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode("hello " + userName + " " + rollName + " " + filmName);
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("rootElement");
+    currentDiv.appendChild(newDiv)
+
     $.ajax(
         {
             data: {
-                image: data_uri
+                image: data_uri,
+                userName: userName,
+                rollName: rollName,
+                filmName: filmName
             },
             method : 'POST',
             url : '/foto/save_info',
             success: function(resp) {
-                const newDiv = document.createElement("div");
-                const newContent = document.createTextNode("hello " + resp["name"] + " " + resp["w"] + " " + resp["h"]);
-                newDiv.appendChild(newContent);
-                const currentDiv = document.getElementById("rootElement");
-                currentDiv.appendChild(newDiv)
 
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);

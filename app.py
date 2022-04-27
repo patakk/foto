@@ -7,6 +7,7 @@ import shutil
 import os
 import re
 import glob
+import json
 
 app = Flask(__name__)
 application = app
@@ -19,6 +20,13 @@ def save_info():
         decoded = base64.b64decode(imgstr)
         with open('./static/output.png', 'wb') as f:
             f.write(decoded)
+
+        userName = request.values['userName']
+        rollName = request.values['rollName']
+        filmName = request.values['filmName']
+        
+        #if os.path.exists('./static/{}'.format(userName)):
+
         return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
 
 
