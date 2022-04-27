@@ -9,13 +9,6 @@ body {
     background-size: 10px 10px;
 }
 
-img{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1.0;
-}
 
 label {
     font-family: "Roboto Mono", sans-serif;
