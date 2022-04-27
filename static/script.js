@@ -15,11 +15,11 @@ function requestSave(){
             method : 'POST',
             url : '/foto/save_info',
             success: function(resp) {
-                /*const newDiv = document.createElement("div");
+                const newDiv = document.createElement("div");
                 const newContent = document.createTextNode("hello " + resp["name"] + " " + resp["w"] + " " + resp["h"]);
                 newDiv.appendChild(newContent);
                 const currentDiv = document.getElementById("rootElement");
-                currentDiv.appendChild(newDiv)*/
+                currentDiv.appendChild(newDiv)
 
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);
