@@ -1,5 +1,8 @@
 
-
+var canvas = null;
+var video = null;
+var photo = null;
+var context = null;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -44,10 +47,10 @@ function requestSave(data_uri){
 }
 
 function takepicture() {
-    const canvas = document.getElementById('canvas');
-    const video = document.querySelector('video');
-    const photo = document.getElementById('photo');
-    var context = canvas.getContext('2d');
+    canvas = document.getElementById('canvas');
+    video = document.querySelector('video');
+    photo = document.getElementById('photo');
+    context = canvas.getContext('2d');
     var width = window.innerWidth;
     var height = window.innerWidth*3/4;
     canvas.width = width;
