@@ -14,9 +14,9 @@ application = app
 def save_info():
     if request.method == 'POST':
         image = request.values['image']
-        with open("static/aaaa.png", "wb") as f:
+        with open("./static/aaaa.png", "wb") as f:
             f.write(base64.decodebytes(image))
-        return jsonify({'name': '::'.join(os.listdir('.')), 'w': 111, 'h': 222})
+        return jsonify({'name': image, 'w': 111, 'h': 222})
 
 
 @app.route("/")
