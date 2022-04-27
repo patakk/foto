@@ -71,15 +71,13 @@ $(document).ready(function(){
     document.getElementById('save-label').onmousedown = saveOnMouseDown;
 
     
-    const video = document.querySelector("#player");
-    
-    const hdConstraints = {
-        video: { width: { min: 1280 }, height: { min: 720 } },
-      };
-      
-    navigator.mediaDevices.getUserMedia(hdConstraints).then((stream) => {
-        video.srcObject = stream;
+    Webcam.set({
+        width: 320,
+        height: 240,
+        image_format: 'jpeg',
+        jpeg_quality: 90
     });
+    Webcam.attach( '#player' );
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
