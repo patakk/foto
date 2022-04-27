@@ -37,9 +37,9 @@ def save_info():
 
         data = {
             'film': filmName,
-            'iso': 400,
-            'speed': "1/125",
-            'aperture': "f/1.4"
+            'iso': isoValue,
+            'speed': shutterValue,
+            'aperture': apertureValue
         }
 
         jsonPath = os.path.join(rollDir, '{}.json'.format(nframes))
@@ -61,7 +61,7 @@ def save_info():
         im = im.save(imagePath)
 
         #return jsonify({'name': './static/output.pnga', 'w': 111, 'h': 222})
-
+        return jsonify({'message': 'SUCCESS'})
 
 @app.route("/")
 def hello():
