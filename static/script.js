@@ -143,9 +143,9 @@ function animationLoop(){
     var width, height, rect;
 
     if(timer < 0){
-        saveLabel.style.background = "#101010";
-        saveLabel.style.color = "#FFFFFF"; 
-        saveLabel.innerHTML = "SAVE";
+        //saveLabel.style.background = "#101010";
+        //saveLabel.style.color = "#FFFFFF"; 
+        //saveLabel.innerHTML = "SAVE";
     }
     else{
         timer = timer - 33;
