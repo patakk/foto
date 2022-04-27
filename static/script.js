@@ -48,6 +48,7 @@ function requestSave(data_uri){
                     saveLabel.style.background = "#18FF18";
                     saveLabel.style.color = "#000000";
                     saveLabel.innerHTML = "SAVED!";
+                    timer = 3000;
                 }
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);
