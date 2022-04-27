@@ -101,7 +101,7 @@ function handleSaveStart(){
     saveLabel.style.background = "#2030FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "SAVING...";
-    timer = 3000;
+    timer = 10000;
 }
 
 function handleSnapEnd(){
