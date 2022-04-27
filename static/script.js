@@ -1,8 +1,5 @@
 
 
-const canvas = null;
-const video = null;
-const photo = null;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -47,6 +44,9 @@ function requestSave(data_uri){
 }
 
 function takepicture() {
+    const canvas = document.getElementById('canvas');
+    const video = document.querySelector('video');
+    const photo = document.getElementById('photo');
     var context = canvas.getContext('2d');
     var width = window.innerWidth;
     var height = window.innerWidth*3/4;
@@ -91,10 +91,6 @@ $(document).ready(function(){
  
     document.getElementById('save-label').addEventListener('touchstart', handleStart);
     document.getElementById('save-label').addEventListener('touchend', handleEnd);
-
-    canvas = document.getElementById('canvas');
-    video = document.querySelector('video');
-    photo = document.getElementById('photo');
 
     Webcam.set({
         width: 480,
