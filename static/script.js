@@ -92,8 +92,6 @@ function handleEnd(){
         snapLabel.innerHTML = 'SNAP!'
     }
     snap = !snap;
-    snapLabel.style.top = height*1.1;
-    snapLabel.style.left = window.innerWidth*0.5 - snapLabel.style.width/2;
 }
 
 
@@ -109,6 +107,11 @@ if (hasGetUserMedia()) {
 
 function animationLoop(){
     
+    var width = window.innerWidth;
+    var height = window.innerWidth*3/4;
+    snapLabel.style.top = height*1.1;
+    snapLabel.style.left = window.innerWidth*0.5 - snapLabel.style.width/2;
+
     if(!snap)
         takepicture();
     
