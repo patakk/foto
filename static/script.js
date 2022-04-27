@@ -72,7 +72,9 @@ $(document).ready(function(){
 
     Webcam.set({
         width: window.innerWidth,
-        height: window.innerWidth*16/9,
+        height: window.innerHeight*16/9,
+		crop_width: window.innerWidth,
+		crop_height: window.innerWidth*3/4,
         image_format: 'jpeg',
         jpeg_quality: 90
     });
