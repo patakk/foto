@@ -101,7 +101,7 @@ $(document).ready(function(){
     Webcam.attach( '#player' );
 
     
-    //document.getElementById('player').style.visibility = "hidden";
+    document.getElementById('player').style.opacity = 0;
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
     //if (ext == "png" || ext == "jng")
