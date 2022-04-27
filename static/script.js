@@ -75,9 +75,14 @@ function takepicture() {
     }
   }
 
-function handleStart(){
+function handleSnapStart(){
     snapLabel.style.background = "#FFFFFF";
     snapLabel.style.color = "#101010";
+}
+
+function handleSaveStart(){
+    saveLabel.style.background = "#FFFFFF";
+    saveLabel.style.color = "#101010";
 }
 
 function handleSnapEnd(){
@@ -96,8 +101,8 @@ function handleSnapEnd(){
 }
 
 function handleSaveEnd(){
-    snapLabel.style.background = "#101010";
-    snapLabel.style.color = "#FFFFFF"; 
+    saveLabel.style.background = "#101010";
+    saveLabel.style.color = "#FFFFFF"; 
 }
 
 
@@ -136,12 +141,12 @@ $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
     
     snapLabel = document.getElementById("snap-button");
-    snapLabel.addEventListener('touchstart', handleStart);
+    snapLabel.addEventListener('touchstart', handleSnapStart);
     snapLabel.addEventListener('touchend', handleSnapEnd);
     
     saveLabel = document.getElementById("save-button");
-    snapLabel.addEventListener('touchstart', handleStart);
-    snapLabel.addEventListener('touchend', handleSaveEnd);
+    saveLabel.addEventListener('touchstart', handleSaveStart);
+    saveLabel.addEventListener('touchend', handleSaveEnd);
     
 
     Webcam.set({
