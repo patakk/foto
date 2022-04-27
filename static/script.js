@@ -133,20 +133,22 @@ function animationLoop(){
     width = window.innerWidth;
     height = window.innerWidth*3/4;
 
-    var canvasRect = canvas.getBoundingClientRect();
+    if(canvas){
+        var canvasRect = canvas.getBoundingClientRect();
 
-    snapLabel.style.top = canvasRect['bottom']*1. + window.innerHeight*0.05 + "px";
-    var snapRect = snapLabel.getBoundingClientRect();
-    snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
+        snapLabel.style.top = canvasRect['bottom']*1. + window.innerHeight*0.05 + "px";
+        var snapRect = snapLabel.getBoundingClientRect();
+        snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
+        
+        form.style.left = width*.125 + "px";
+        form.style.top = snapRect["bottom"] + window.innerHeight*0.05 + "px";
+        form.style.width = width*.75 + "px";
+        var formRect = form.getBoundingClientRect();
     
-    form.style.left = width*.125 + "px";
-    form.style.top = snapRect["bottom"] + window.innerHeight*0.05 + "px";
-    form.style.width = width*.75 + "px";
-    var formRect = form.getBoundingClientRect();
-
-    var saveRect = saveLabel.getBoundingClientRect();
-    saveLabel.style.top = formRect['bottom']*1. + window.innerHeight*0.05 + "px";
-    saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
+        var saveRect = saveLabel.getBoundingClientRect();
+        saveLabel.style.top = formRect['bottom']*1. + window.innerHeight*0.05 + "px";
+        saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
+    }
 
 
     document.getElementById("fname").style.width = width*.75 - 8 + "px";
