@@ -34,3 +34,10 @@ video {
     top: 0px;
     margin: 0px;
 }
+
+.player {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+}
