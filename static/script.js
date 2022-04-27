@@ -44,7 +44,7 @@ function requestSave(data_uri){
             url : '/foto/save_info',
             success: function(resp) {
 
-                if(resp["message"].localeCompare("SUCCESS")){
+                if(resp["message"]){
                     saveLabel.style.background = "#18FF18";
                     saveLabel.style.color = "#EEEEEE";
                     saveLabel.innerHTML = "SAVED!";
