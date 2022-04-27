@@ -133,17 +133,22 @@ function animationLoop(){
     width = window.innerWidth;
     height = window.innerWidth*3/4;
 
-    snapLabel.style.top = height*1.;
-    rect = snapLabel.getBoundingClientRect();
-    snapLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
-    
-    rect = saveLabel.getBoundingClientRect();
-    saveLabel.style.top = window.innerHeight*.95 - rect["height"]*.5 + "px";
-    saveLabel.style.left = window.innerWidth*0.5 - rect["width"]/2;
+    var canvasRect = canvas.getBoundingClientRect();
 
+    snapLabel.style.top = canvasRect['bottom']*1. + window.innerHeight*0.05 + "px";
+    var snapRect = snapLabel.getBoundingClientRect();
+    snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
+    
     form.style.left = width*.125 + "px";
-    form.style.top = height*1.05 + rect["height"] + "px";
+    form.style.top = snapRect["bottom"] + window.innerHeight*0.05 + "px";
     form.style.width = width*.75 + "px";
+    formRect = form.getBoundingClientRect();
+
+    saveRect = saveLabel.getBoundingClientRect();
+    saveLabel.style.top = formRect['bottom']*1. + window.innerHeight*0.05 + "px";
+    saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
+
+
     document.getElementById("fname").style.width = width*.75 - 8 + "px";
     document.getElementById("lname").style.width = width*.75 - 8 + "px";
     document.getElementById("films").style.width = width*.75 - 8 + "px";
