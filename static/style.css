@@ -42,5 +42,7 @@ video {
     margin: 0px;
 }
 #player {
+    position: absolute;
+    left: 500px;
     z-index: +1000;
 }
