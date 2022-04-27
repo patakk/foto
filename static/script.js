@@ -46,7 +46,7 @@ function requestSave(data_uri){
 
                 if(resp["message"]){
                     saveLabel.style.background = "#18FF18";
-                    saveLabel.style.color = "#EEEEEE";
+                    saveLabel.style.color = "#000000";
                     saveLabel.innerHTML = "SAVED!";
                     timer = 3000;
                 }
@@ -118,8 +118,9 @@ function handleSnapEnd(){
 }
 
 function handleSaveEnd(){
-    saveLabel.style.background = "#101010";
+    saveLabel.style.background = "#106010";
     saveLabel.style.color = "#FFFFFF"; 
+    saveLabel.innerHTML = "SAVING...";
     requestSave(canvas.toDataURL('image/png'));
 }
 
