@@ -78,8 +78,8 @@ $(document).ready(function(){
     document.getElementById('save-label').addEventListener('touchend', handleEnd);
 
     Webcam.set({
-        width: window.innerWidth*0.7,
-        height: window.innerHeight*16/9*0.7,
+        width: window.innerWidth*16/9*0.7,
+        height: window.innerWidth*0.7,
         image_format: 'jpeg',
         jpeg_quality: 90
     });
