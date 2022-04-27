@@ -67,9 +67,9 @@ function animLoop(){
     navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
             video.srcObject = stream;
+            setInterval(animLoop, 33);
         });
 
-    setInterval(animLoop, 33);
 }
 
 
