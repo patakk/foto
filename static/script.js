@@ -9,6 +9,7 @@ var saveLabel = null;
 var form = null;
 var innerH = null;
 var timer = 0;
+var snapsnap = false;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -115,7 +116,8 @@ function handleSnapEnd(){
     //} );
     if(!snap){
         snapLabel.style.background = "#101010";
-        snapLabel.innerHTML = '&nbsp;NEW FRAME'
+        snapLabel.innerHTML = '&nbsp;NEW FRAME';
+        snapsnap = false;
     }
     else{
         snapLabel.style.background = "#101010";
@@ -160,6 +162,7 @@ function animationLoop(){
             saveLabel.style.background = "#444444";
             snapLabel.style.background = "#101010";
             snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
+            snapsnap = true;
         }
         saveLabel.style.color = "#FFFFFF"; 
         saveLabel.innerHTML = "&nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;";
@@ -197,7 +200,7 @@ function animationLoop(){
     document.getElementById("shutterspeed").style.width = width*.75 - 8 + "px";
     document.getElementById("aperture").style.width = width*.75 - 8 + "px";
 
-    if(!snap)
+    if(!snap && snapsnap)
         takepicture();
     
     window.requestAnimationFrame(animationLoop);
