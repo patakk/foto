@@ -10,8 +10,10 @@ $(document).ready(function(){
     var sessionRect = sessionLabel.getBoundingClientRect();
     var previewRect = sessionLabel.getBoundingClientRect();
 
+    sessionLabel.style.position = "absolute";
     sessionLabel.style.left = window.innerWidth/2 - sessionRect['width']/2 + "px";
     sessionLabel.style.top = window.innerHeight/2 - sessionRect['height'] + "px";
+    previewLabel.style.position = "absolute";
     previewLabel.style.left = window.innerWidth/2 - previewRect['width']/2 + "px";
     previewLabel.style.top = window.innerHeight/2 + "px";
 
