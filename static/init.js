@@ -26,10 +26,18 @@ function handleSessionEnd(){
                 currentDiv.appendChild(newDiv)
             },
             progress: function(e) {
-                console.log(e);
+                const newDiv = document.createElement("div");
+                const newContent = document.createTextNode("progress " );
+                newDiv.appendChild(newContent);
+                const currentDiv = document.getElementById("rootElement");
+                currentDiv.appendChild(newDiv)
             },
             fail: function(resp) {
-                console.log("fail")
+                const newDiv = document.createElement("div");
+                const newContent = document.createTextNode("fail " );
+                newDiv.appendChild(newContent);
+                const currentDiv = document.getElementById("rootElement");
+                currentDiv.appendChild(newDiv)
             }
         }
     );
