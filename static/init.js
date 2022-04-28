@@ -1,7 +1,5 @@
 
-        
-$(document).ready(function(){
-    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+function animationLoop(){
     
     previewLabel = document.getElementById("session-button");
     sessionLabel = document.getElementById("preview-button");
@@ -17,6 +15,13 @@ $(document).ready(function(){
     sessionLabel.style.top = 222 + "px";
     previewLabel.style.left = 333 + "px";
     previewLabel.style.top = 555 + "px";
+    window.requestAnimationFrame(animationLoop);
+}
+        
+$(document).ready(function(){
+    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+        
+    window.requestAnimationFrame(animationLoop);
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
