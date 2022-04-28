@@ -13,33 +13,8 @@ function handleSubmitEnd(){
 
     var userName = document.getElementById("fname").value;
 
-    $.ajax(
-        {
-            data: {
-                userName: userName,
-            },
-            method : 'POST',
-            url : '/foto/preview',
-            success: function(resp) {
-                const newDiv = document.createElement("div");
-                const newContent = document.createTextNode(resp["message"]);
-                newDiv.appendChild(newContent);
-                const currentDiv = document.getElementById("rootElement");
-                currentDiv.appendChild(newDiv)
-                //var table = document.getElementById("model-table");
-                //var row = table.insertRow(0);
-                //var cell = row.insertCell(0);
-                //cell.innerHTML = "<div onmouseup=\"modelLinkOnMouseUp(event)\" class=\"model_link\" id=" + resp["name"] + ">" + resp["name"] + "</div>";
-
-            },
-            progress: function(e) {
-                console.log(e);
-            },
-            fail: function(resp) {
-                console.log("fail")
-            }
-        }
-    );
+    
+    window.location.href = '/foto/previewRolls?name=' + userName;
 }
 
 function animationLoop(){
