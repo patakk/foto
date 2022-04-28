@@ -54,3 +54,4 @@ $(document).ready(function(){
     //if (ext == "png" || ext == "jng")
     //    document.getElementById('img').style.visibility = "visible";
 });
+console.log("fsaasasas")
