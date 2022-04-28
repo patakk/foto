@@ -49,6 +49,7 @@ function requestSave(data_uri){
                     saveLabel.style.color = "#FFFFFF";
                     saveLabel.innerHTML = "&nbsp;&nbsp;SAVED!&nbsp;&nbsp;";
                     timer = 1300;
+                    snap = false;
                 }
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);
@@ -150,7 +151,7 @@ function animationLoop(){
     var width, height, rect;
 
     if(timer <= 0){
-        if(snap){
+        if(snap || true){
             saveLabel.style.background = "#101010";
             snapLabel.style.background = "#101010";
             snapLabel.innerHTML = '&nbsp;NEW FRAME'
