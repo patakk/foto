@@ -150,16 +150,22 @@ function animationLoop(){
     var width, height, rect;
 
     if(timer <= 0){
-        if(snap)
+        if(snap){
             saveLabel.style.background = "#101010";
-        else
+            snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
+        }
+        else{
             saveLabel.style.background = "#444444";
+            snapLabel.style.background = "#2080FF";
+            snapLabel.innerHTML = '&nbsp;NEW FRAME'
+        }
         saveLabel.style.color = "#FFFFFF"; 
         saveLabel.innerHTML = "&nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;";
     }
     else{
         timer = timer - 33;
     }
+  
 
     width = window.innerWidth;
     height = window.innerWidth*3/4;
