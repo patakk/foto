@@ -76,7 +76,7 @@ def session():
 @app.route("/preview", methods=['GET', 'POST'])
 def preview():
     
-    if request.method == 'POST':
+    if request.method == 'GET':
         userName = request.values['userName']
         userDir = './static/database/{}'.format(userName)
         if not os.path.exists(userDir):
