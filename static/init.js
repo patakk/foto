@@ -39,6 +39,8 @@ function animationLoop(){
     sessionLabel.addEventListener('touchend', handleSessionEnd);
     previewLabel.addEventListener('touchstart', handlePreviewStart);
     previewLabel.addEventListener('touchend', handlePreviewEnd);
+    previewLabel.addEventListener('mousedown', handlePreviewStart);
+    previewLabel.addEventListener('mouseup', handlePreviewEnd);
     window.requestAnimationFrame(animationLoop);
 }
        
