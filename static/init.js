@@ -18,6 +18,12 @@ function handleSessionEnd(){
             method : 'POST',
             url : '/foto/session',
             success: function(resp) {
+                
+                const newDiv = document.createElement("div");
+                const newContent = document.createTextNode("hellosafasa " );
+                newDiv.appendChild(newContent);
+                const currentDiv = document.getElementById("rootElement");
+                currentDiv.appendChild(newDiv)
             },
             progress: function(e) {
                 console.log(e);
