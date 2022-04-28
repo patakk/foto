@@ -94,9 +94,13 @@ function takepicture() {
     }
   }
 
-function handleSnapStart(){
+  function handleSnapStart(){
     //snapLabel.style.background = "#FFFFFF";
     //snapLabel.style.color = "#101010";
+}
+
+function handleBackStart(){
+    window.location.href = '/foto';
 }
 
 function handleSaveStart(){
@@ -222,6 +226,8 @@ $(document).ready(function(){
     saveLabel = document.getElementById("save-button");
     saveLabel.addEventListener('touchstart', handleSaveStart);
     saveLabel.addEventListener('touchend', handleSaveEnd);
+
+    document.getElementById("back-button").addEventListener('touchstart', handleBackStart);
 
     innerH = window.innerHeight;
     
