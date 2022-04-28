@@ -118,6 +118,7 @@ function handleSnapEnd(){
         snapLabel.innerHTML = '&nbsp;NEW FRAME'
     }
     else{
+        snapLabel.style.background = "#101010";
         snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
     }
     snap = !snap;
@@ -157,6 +158,7 @@ function animationLoop(){
         }
         else{
             saveLabel.style.background = "#444444";
+            snapLabel.style.background = "#101010";
             snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
         }
         saveLabel.style.color = "#FFFFFF"; 
