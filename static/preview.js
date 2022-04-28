@@ -22,7 +22,7 @@ function handleSubmitEnd(){
             url : '/foto/preview',
             success: function(resp) {
                 const newDiv = document.createElement("div");
-                const newContent = document.createTextNode("hello ");
+                const newContent = document.createTextNode(resp["message"]);
                 newDiv.appendChild(newContent);
                 const currentDiv = document.getElementById("rootElement");
                 currentDiv.appendChild(newDiv)
