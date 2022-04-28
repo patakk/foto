@@ -23,8 +23,8 @@ function handlePreviewEnd(){
 
 function animationLoop(){
     
-    previewLabel = document.getElementById("session-button");
-    sessionLabel = document.getElementById("preview-button");
+    previewLabel = document.getElementById("preview-button");
+    sessionLabel = document.getElementById("session-button");
 
     var sessionRect = sessionLabel.getBoundingClientRect();
     var previewRect = previewLabel.getBoundingClientRect();
