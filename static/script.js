@@ -111,10 +111,10 @@ function handleSnapEnd(){
     //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     //} );
     if(!snap){
-        snapLabel.innerHTML = 'GET NEW PHOTO'
+        snapLabel.innerHTML = '&nbsp;NEW FRAME'
     }
     else{
-        snapLabel.innerHTML = 'SNAP!'
+        snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
     }
     snap = !snap;
 }
