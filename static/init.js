@@ -37,6 +37,10 @@ function animationLoop(){
     sessionLabel.style.top = 222 + "px";
     previewLabel.style.left = 333 + "px";
     previewLabel.style.top = 555 + "px";
+    sessionLabel.addEventListener('touchstart', handleSessionStart);
+    sessionLabel.addEventListener('touchend', handleSessionEnd);
+    previewLabel.addEventListener('touchstart', handlePreviewStart);
+    previewLabel.addEventListener('touchend', handlePreviewEnd);
     window.requestAnimationFrame(animationLoop);
 }
         
