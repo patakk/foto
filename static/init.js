@@ -1,3 +1,25 @@
+var previewLabel = null;
+var sessionLabel = null;
+
+function handleSessionStart(){
+    sessionLabel.style.background = "#FFFFFF";
+    sessionLabel.style.color = "#101010";
+}
+
+function handleSessionEnd(){
+    sessionLabel.style.background = "#101010";
+    sessionLabel.style.color = "#FFFFFF";
+}
+
+function handlePreviewStart(){
+    previewLabel.style.background = "#FFFFFF";
+    previewLabel.style.color = "#101010";
+}
+
+function handlePreviewEnd(){
+    previewLabel.style.background = "#101010";
+    previewLabel.style.color = "#FFFFFF";
+}
 
 function animationLoop(){
     
