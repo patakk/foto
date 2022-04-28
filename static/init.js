@@ -10,7 +10,7 @@ function handleSessionEnd(){
     sessionLabel.style.background = "#101010";
     sessionLabel.style.color = "#FFFFFF";
 
-    window.location.href = '/session';
+    window.location.href = '/foto/session';
 }
 
 function handlePreviewStart(){
