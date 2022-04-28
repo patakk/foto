@@ -111,6 +111,7 @@ function handleSnapEnd(){
     //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     //} );
     if(!snap){
+        snapLabel.style.background = "#2080FF";
         snapLabel.innerHTML = '&nbsp;NEW FRAME'
     }
     else{
