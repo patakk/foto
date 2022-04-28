@@ -23,7 +23,6 @@ function handlePreviewEnd(){
 
 function animationLoop(){
     
-console.log("fsaasasas")
     previewLabel = document.getElementById("session-button");
     sessionLabel = document.getElementById("preview-button");
 
@@ -46,8 +45,9 @@ console.log("fsaasasas")
 }
         
 $(document).ready(function(){
-    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+    //document.addEventListener("touchmove", preventBehavior, {passive: false}); 
         
+    console.log("fsaasasas")
     window.requestAnimationFrame(animationLoop);
 
     //var path = document.getElementById('img').src;
