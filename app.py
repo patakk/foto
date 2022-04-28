@@ -66,6 +66,10 @@ def save_info():
 @app.route("/")
 def hello():
     return render_template('init.html')
+    
+@app.route("/session")
+def session():
+    return render_template('session.html')
 
 
 if __name__ == "__main__":

@@ -9,6 +9,8 @@ function handleSessionStart(){
 function handleSessionEnd(){
     sessionLabel.style.background = "#101010";
     sessionLabel.style.color = "#FFFFFF";
+
+    window.location.href = '/session';
 }
 
 function handlePreviewStart(){
