@@ -65,7 +65,7 @@ def save_info():
 
 @app.route("/")
 def hello():
-    return render_template('index.html')
+    return render_template('init.html')
 
 
 if __name__ == "__main__":
