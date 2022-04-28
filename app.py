@@ -76,9 +76,11 @@ def session():
 @app.route("/preview", methods=['GET', 'POST'])
 def preview():
     
-    if request.values['userName'] > 0:
+    if request.method == 'POST':
         userName = request.values['userName']
         userDir = './static/database/{}'.format(userName)
+        if not os.path.exists(userDir):
+            return render_template('preview.html')
         rolls = os.listdir(userDir)
         
         return render_template('previewRolls.html', rollslen=len(rolls), Pokemons=rolls)
