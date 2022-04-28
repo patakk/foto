@@ -45,7 +45,7 @@ function requestSave(data_uri){
             success: function(resp) {
 
                 if(resp["message"]){
-                    saveLabel.style.background = "#18FF18";
+                    saveLabel.style.background = "#48FF48";
                     saveLabel.style.color = "#000000";
                     saveLabel.innerHTML = "&nbsp;&nbsp;SAVED!&nbsp;&nbsp;";
                     timer = 1300;
