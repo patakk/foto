@@ -114,7 +114,7 @@ function handleSnapEnd(){
     //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     //} );
     if(!snap){
-        snapLabel.style.background = "#2080FF";
+        snapLabel.style.background = "#101010";
         snapLabel.innerHTML = '&nbsp;NEW FRAME'
     }
     else{
@@ -153,7 +153,7 @@ function animationLoop(){
     if(timer <= 0){
         if(snap){
             saveLabel.style.background = "#101010";
-            snapLabel.style.background = "#2080FF";
+            snapLabel.style.background = "#101010";
             snapLabel.innerHTML = '&nbsp;NEW FRAME'
         }
         else{
