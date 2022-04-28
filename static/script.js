@@ -175,7 +175,7 @@ function animationLoop(){
     width = window.innerWidth;
     height = window.innerWidth*3/4;
 
-    if(canvas){
+    try{
         var canvasRect = canvas.getBoundingClientRect();
 
         snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
@@ -190,6 +190,9 @@ function animationLoop(){
         var saveRect = saveLabel.getBoundingClientRect();
         saveLabel.style.top = formRect['bottom']*1. + innerH*0.02 + "px";
         saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
+    }
+    catch(err) {
+        document.getElementById("message").innerHTML = err.message;
     }
 
 
