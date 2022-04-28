@@ -79,7 +79,7 @@ def preview():
 
 @app.route("/previewRolls", methods=['GET', 'POST'])
 def previewRolls():
-    userName = request.values['userName']
+    userName = 'Ggt'
     userDir = './static/database/{}'.format(userName)
     return userDir
 
