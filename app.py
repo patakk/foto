@@ -67,7 +67,7 @@ def save_info():
 def hello():
     return render_template('init.html')
     
-@app.route("/session")
+@app.route("/session", methods=['GET', 'POST'])
 def session():
     return render_template('session.html')
 
