@@ -159,7 +159,7 @@ function animationLoop(){
             snapLabel.innerHTML = '&nbsp;NEW FRAME'
         }
         else{
-            saveLabel.style.background = "#444444";
+            saveLabel.style.background = "#777777";
             snapLabel.style.background = "#101010";
             snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
             snapsnap = true;
