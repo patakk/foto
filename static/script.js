@@ -182,9 +182,9 @@ function animationLoop(){
         var snapRect = snapLabel.getBoundingClientRect();
         snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
         
-        form.style.left = width*.125 + "px";
+        form.style.left = width*.075 + "px";
         form.style.top = snapRect["bottom"] + innerH*0.02 + "px";
-        form.style.width = width*.75 + "px";
+        form.style.width = width*.85 + "px";
         var formRect = form.getBoundingClientRect();
     
         var saveRect = saveLabel.getBoundingClientRect();
@@ -196,12 +196,12 @@ function animationLoop(){
     }
 
 
-    document.getElementById("fname").style.width = width*.75 - 8 + "px";
-    document.getElementById("lname").style.width = width*.75 - 8 + "px";
-    document.getElementById("films").style.width = width*.75 - 8 + "px";
-    document.getElementById("iso").style.width = width*.75 - 8 + "px";
-    document.getElementById("shutterspeed").style.width = width*.75 - 8 + "px";
-    document.getElementById("aperture").style.width = width*.75 - 8 + "px";
+    document.getElementById("fname").style.width = width*.85 - 8 + "px";
+    document.getElementById("lname").style.width = width*.85 - 8 + "px";
+    document.getElementById("films").style.width = width*.85 - 8 + "px";
+    document.getElementById("iso").style.width = width*.85 - 8 + "px";
+    document.getElementById("shutterspeed").style.width = width*.85 - 8 + "px";
+    document.getElementById("aperture").style.width = width*.85 - 8 + "px";
 
     if(!snap && snapsnap)
         takepicture();
