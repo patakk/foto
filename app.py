@@ -83,7 +83,7 @@ def preview():
             return render_template('preview.html')
         rolls = os.listdir(userDir)
         
-        return render_template('previewRolls.html', rollslen=len(rolls), Pokemons=rolls)
+        return render_template('previewRolls.html', rollslen=len(rolls), rolls=rolls)
 
     return render_template('preview.html')
 
