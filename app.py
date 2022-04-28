@@ -81,7 +81,7 @@ def preview():
 def previewRolls():
     userName = 'Ggt'
     userDir = './static/database/{}'.format(userName)
-    return userDir
+    return '::'.join(os.listdir(userDir))
 
 if __name__ == "__main__":
     app.run("0.0.0.0", port=5005)
