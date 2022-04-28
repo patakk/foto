@@ -33,6 +33,7 @@ function animationLoop(){
     var nameRect = nameLabel.getBoundingClientRect();
     var submitRect = submitLabel.getBoundingClientRect();
 
+    var width = window.innerWidth;
     form.style.left = width*.075 + "px";
     form.style.top = window.innerHeight*.5 + "px";
     form.style.width = width*.85 + "px";
@@ -40,7 +41,7 @@ function animationLoop(){
 
     submitLabel.style.left = width*.075 + "px";
     submitLabel.style.top = formRect['bottom'] + "px";
-    submitLabel.style.width = width*.85 + "px";
+    submitLabel.style.width = width*.85 - 8 + "px";
 
     submitLabel.addEventListener('touchstart', handleSubmitStart);
     submitLabel.addEventListener('touchend', handleSubmitEnd);
