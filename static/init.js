@@ -39,9 +39,12 @@ function animationLoop(){
     previewLabel.addEventListener('touchend', handlePreviewEnd);
     window.requestAnimationFrame(animationLoop);
 }
-        
+       
+function preventBehavior(e) {
+    e.preventDefault(); 
+}; 
 $(document).ready(function(){
-    //document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
         
     window.requestAnimationFrame(animationLoop);
 
