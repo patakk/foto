@@ -10,37 +10,7 @@ function handleSessionEnd(){
     sessionLabel.style.background = "#101010";
     sessionLabel.style.color = "#FFFFFF";
 
-    $.ajax(
-        {
-            data: {
-                'mode': 'session'
-            },
-            method : 'POST',
-            url : '/foto/session',
-            success: function(resp) {
-                
-                const newDiv = document.createElement("div");
-                const newContent = document.createTextNode("hellosafasa " );
-                newDiv.appendChild(newContent);
-                const currentDiv = document.getElementById("rootElement");
-                currentDiv.appendChild(newDiv)
-            },
-            progress: function(e) {
-                const newDiv = document.createElement("div");
-                const newContent = document.createTextNode("progress " );
-                newDiv.appendChild(newContent);
-                const currentDiv = document.getElementById("rootElement");
-                currentDiv.appendChild(newDiv)
-            },
-            fail: function(resp) {
-                const newDiv = document.createElement("div");
-                const newContent = document.createTextNode("fail " );
-                newDiv.appendChild(newContent);
-                const currentDiv = document.getElementById("rootElement");
-                currentDiv.appendChild(newDiv)
-            }
-        }
-    );
+    window.location.href = '/foto/session';
 }
 
 function handlePreviewStart(){
