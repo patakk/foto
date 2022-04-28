@@ -17,8 +17,6 @@ application = app
 def save_info():
     if request.method == 'POST':
 
-        if request.values['userName'] == ''
-
         userName = request.values['userName']
         rollName = request.values['rollName']
         filmName = request.values['filmName']
