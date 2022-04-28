@@ -81,7 +81,11 @@ def preview():
 def previewRolls():
     userName = 'Ggt'
     userDir = './static/database/{}'.format(userName)
-    return '::'.join(os.listdir(userDir))
+    if not os.path.exists(userDir):
+        return render_template('preview.html')
+    rolls = os.listdir(userDir)
+    return render_template('previewRolls.html', rollslen=len(rolls), rolls=rolls)
+
 
 if __name__ == "__main__":
     app.run("0.0.0.0", port=5005)
