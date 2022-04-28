@@ -19,7 +19,7 @@ function handleSubmitEnd(){
                 userName: userName,
             },
             method : 'POST',
-            url : '/foto/preview',
+            url : '/foto/previewRolls',
             success: function(resp) {
                 const newDiv = document.createElement("div");
                 const newContent = document.createTextNode(resp["message"]);
