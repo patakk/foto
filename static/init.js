@@ -12,7 +12,11 @@ $(document).ready(function(){
     sessionLabel.style.left = window.innerWidth/2 - sessionRect['width']/2 + "px";
     sessionLabel.style.top = window.innerHeight/2 - sessionRect['height'] + "px";
     previewLabel.style.left = window.innerWidth/2 - previewRect['width']/2 + "px";
-    previewLabel.style.top = window.innerHeight/2 + "px";
+    previewLabel.style.top = window.innerHeight/2 + "px"
+    sessionLabel.style.left =222 + "px";
+    sessionLabel.style.top = 222 + "px";
+    previewLabel.style.left = 333 + "px";
+    previewLabel.style.top = 555 + "px";
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
