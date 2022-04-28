@@ -17,6 +17,8 @@ application = app
 def save_info():
     if request.method == 'POST':
 
+        if request.values['userName'] == ''
+
         userName = request.values['userName']
         rollName = request.values['rollName']
         filmName = request.values['filmName']
@@ -24,9 +26,11 @@ def save_info():
         apertureValue = request.values['apertureValue']
         shutterValue = request.values['shutterValue']
             
-        userDir = './static/{}'.format(userName)
-        rollDir = './static/{}/{}'.format(userName, rollName)
+        userDir = './static/database/{}'.format(userName)
+        rollDir = './static/database/{}/{}'.format(userName, rollName)
         
+        if not os.path.exists('./static/database'):
+            os.makedirs('./static/database')
         if not os.path.exists(userDir):
             os.makedirs(userDir)
         if not os.path.exists(rollDir):
