@@ -76,7 +76,7 @@ def session():
 @app.route("/preview", methods=['GET', 'POST'])
 def preview():
     
-    if len(request.values['userName']) > 0:
+    if request.values['userName'] > 0:
         userName = request.values['userName']
         userDir = './static/database/{}'.format(userName)
         rolls = os.listdir(userDir)
