@@ -47,7 +47,7 @@ function requestSave(data_uri){
                 if(resp["message"]){
                     saveLabel.style.background = "#18FF18";
                     saveLabel.style.color = "#000000";
-                    saveLabel.innerHTML = "  SAVED!  ";
+                    saveLabel.innerHTML = "&nbsp;&nbsp;SAVED!&nbsp;&nbsp;";
                     timer = 1300;
                 }
                 //var table = document.getElementById("model-table");
@@ -100,7 +100,7 @@ function handleSnapStart(){
 function handleSaveStart(){
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
-    saveLabel.innerHTML = " SAVING...";
+    saveLabel.innerHTML = "&nbsp;SAVING...";
     timer = 10000;
 }
 
@@ -122,7 +122,7 @@ function handleSnapEnd(){
 function handleSaveEnd(){
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
-    saveLabel.innerHTML = " SAVING...";
+    saveLabel.innerHTML = "&nbsp;SAVING...";
     requestSave(canvas.toDataURL('image/png'));
 }
 
@@ -146,7 +146,7 @@ function animationLoop(){
     if(timer <= 0){
         saveLabel.style.background = "#101010";
         saveLabel.style.color = "#FFFFFF"; 
-        saveLabel.innerHTML = "   SAVE   ";
+        saveLabel.innerHTML = "&nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;";
     }
     else{
         timer = timer - 33;
