@@ -1,27 +1,16 @@
-var previewLabel = null;
-var sessionLabel = null;
+var form = null;
+var nameLabel = null;
+var submitLabel = null;
 
-function handleSessionStart(){
-    sessionLabel.style.background = "#FFFFFF";
-    sessionLabel.style.color = "#101010";
+function handleSubmitStart(){
+    submitLabel.style.background = "#FFFFFF";
+    submitLabel.style.color = "#101010";
 }
 
-function handleSessionEnd(){
-    sessionLabel.style.background = "#101010";
-    sessionLabel.style.color = "#FFFFFF";
-
+function handleSubmitEnd(){
+    submitLabel.style.background = "#101010";
+    submitLabel.style.color = "#FFFFFF";
     window.location.href = '/foto/session';
-}
-
-function handlePreviewStart(){
-    previewLabel.style.background = "#FFFFFF";
-    previewLabel.style.color = "#101010";
-}
-
-function handlePreviewEnd(){
-    previewLabel.style.background = "#101010";
-    previewLabel.style.color = "#FFFFFF";
-    window.location.href = '/foto/preview';
 }
 
 function animationLoop(){
