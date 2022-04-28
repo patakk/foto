@@ -98,6 +98,8 @@ function handleSnapStart(){
 }
 
 function handleSaveStart(){
+    if(!snap)
+        return;
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "&nbsp;SAVING...";
@@ -121,6 +123,8 @@ function handleSnapEnd(){
 }
 
 function handleSaveEnd(){
+    if(!snap)
+        return;
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "&nbsp;SAVING...";
@@ -145,7 +149,10 @@ function animationLoop(){
     var width, height, rect;
 
     if(timer <= 0){
-        saveLabel.style.background = "#101010";
+        if(snap)
+            saveLabel.style.background = "#101010";
+        else
+            saveLabel.style.background = "#444444";
         saveLabel.style.color = "#FFFFFF"; 
         saveLabel.innerHTML = "&nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;";
     }
