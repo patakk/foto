@@ -72,6 +72,10 @@ def hello():
 @app.route("/session", methods=['GET', 'POST'])
 def session():
     return render_template('session.html')
+    
+@app.route("/preview", methods=['GET', 'POST'])
+def preview():
+    return render_template('preview.html')
 
 
 if __name__ == "__main__":

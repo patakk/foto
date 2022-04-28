@@ -26,22 +26,24 @@ function handlePreviewEnd(){
 
 function animationLoop(){
     
-    previewLabel = document.getElementById("preview-button");
-    sessionLabel = document.getElementById("session-button");
+    form = document.getElementById("form");
+    nameLabel = document.getElementById("fname");
+    submitLabel = document.getElementById("submit-button");
 
-    var sessionRect = sessionLabel.getBoundingClientRect();
-    var previewRect = previewLabel.getBoundingClientRect();
+    var nameRect = nameLabel.getBoundingClientRect();
+    var submitRect = submitLabel.getBoundingClientRect();
 
-    sessionLabel.style.left = window.innerWidth/2 - sessionRect['width']/2 + "px";
-    sessionLabel.style.top = window.innerHeight/2 - sessionRect['height'] - 5 + "px";
-    previewLabel.style.left = window.innerWidth/2 - previewRect['width']/2 + "px";
-    previewLabel.style.top = window.innerHeight/2 + 5 + "px"
-    sessionLabel.addEventListener('touchstart', handleSessionStart);
-    sessionLabel.addEventListener('touchend', handleSessionEnd);
-    previewLabel.addEventListener('touchstart', handlePreviewStart);
-    previewLabel.addEventListener('touchend', handlePreviewEnd);
-    previewLabel.addEventListener('mousedown', handlePreviewStart);
-    previewLabel.addEventListener('mouseup', handlePreviewEnd);
+    form.style.left = width*.075 + "px";
+    form.style.top = window.innerHeight*.5 + "px";
+    form.style.width = width*.85 + "px";
+    var formRect = form.getBoundingClientRect();
+
+    submitLabel.style.left = width*.075 + "px";
+    submitLabel.style.top = formRect['bottom'] + "px";
+    submitLabel.style.width = width*.85 + "px";
+
+    submitLabel.addEventListener('touchstart', handleSubmitStart);
+    submitLabel.addEventListener('touchend', handleSubmitEnd);
     window.requestAnimationFrame(animationLoop);
 }
        
