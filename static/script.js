@@ -150,17 +150,17 @@ function animationLoop(){
 
     var width, height, rect;
 
+    if(snap){
+        saveLabel.style.background = "#101010";
+        snapLabel.style.background = "#101010";
+        snapLabel.innerHTML = '&nbsp;NEW FRAME'
+    }
+    else{
+        saveLabel.style.background = "#444444";
+        snapLabel.style.background = "#101010";
+        snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
+    }
     if(timer <= 0){
-        if(snap || true){
-            saveLabel.style.background = "#101010";
-            snapLabel.style.background = "#101010";
-            snapLabel.innerHTML = '&nbsp;NEW FRAME'
-        }
-        else{
-            saveLabel.style.background = "#444444";
-            snapLabel.style.background = "#101010";
-            snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
-        }
         saveLabel.style.color = "#FFFFFF"; 
         saveLabel.innerHTML = "&nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;";
     }
