@@ -191,7 +191,7 @@ function animationLoop(){
         saveLabel.style.top = formRect['bottom']*1. + innerH*0.02 + "px";
         saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
         document.getElementById("back-button").style.top = formRect['bottom']*1. + innerH*0.02 + "px";
-        document.getElementById("back-button").style.left = "20px";
+        document.getElementById("back-button").style.left = "10px";
     }
     catch(err) {
         document.getElementById("message").innerHTML = err.message;
