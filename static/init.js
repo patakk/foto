@@ -45,9 +45,8 @@ function animationLoop(){
 }
         
 $(document).ready(function(){
-    //document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
         
-    console.log("fsaasasas")
     window.requestAnimationFrame(animationLoop);
 
     //var path = document.getElementById('img').src;
