@@ -38,6 +38,11 @@ label {
     z-index: +1000;
 }
 
+#back-button {
+    background: none;
+    border: 0px;
+}
+
 
 video {
     position: absolute;
