@@ -30,9 +30,9 @@ function animationLoop(){
     var previewRect = previewLabel.getBoundingClientRect();
 
     sessionLabel.style.left = window.innerWidth/2 - sessionRect['width']/2 + "px";
-    sessionLabel.style.top = window.innerHeight/2 - sessionRect['height'] + "px";
+    sessionLabel.style.top = window.innerHeight/2 - sessionRect['height'] - 5 + "px";
     previewLabel.style.left = window.innerWidth/2 - previewRect['width']/2 + "px";
-    previewLabel.style.top = window.innerHeight/2 + "px"
+    previewLabel.style.top = window.innerHeight/2 + 5 + "px"
     sessionLabel.addEventListener('touchstart', handleSessionStart);
     sessionLabel.addEventListener('touchend', handleSessionEnd);
     previewLabel.addEventListener('touchstart', handlePreviewStart);
