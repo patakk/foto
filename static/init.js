@@ -10,7 +10,23 @@ function handleSessionEnd(){
     sessionLabel.style.background = "#101010";
     sessionLabel.style.color = "#FFFFFF";
 
-    window.location.href = '/foto/session';
+    $.ajax(
+        {
+            data: {
+                'mode': 'session'
+            },
+            method : 'POST',
+            url : '/foto/session',
+            success: function(resp) {
+            },
+            progress: function(e) {
+                console.log(e);
+            },
+            fail: function(resp) {
+                console.log("fail")
+            }
+        }
+    );
 }
 
 function handlePreviewStart(){

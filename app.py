@@ -67,7 +67,7 @@ def save_info():
 def hello():
     return render_template('init.html')
     
-@app.route("/foto/session")
+@app.route("/session")
 def session():
     return render_template('session.html')
 
