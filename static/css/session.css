@@ -17,7 +17,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    position: absolute;
+    position: fixed;
     z-index: +1000;
 }
 
@@ -34,41 +34,41 @@ label {
     padding-top: 16px;
     padding-bottom: 16px;
     text-align: center;
-    position: absolute;
+    position: fixed;
     z-index: +1000;
 }
 
 
 
 video {
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     margin: 0px;
 }
 
 #player {
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     margin: 0px;
 }
 
 #message {
-    position: absolute;
+    position: fixed;
     left: 500px;
     z-index: +1000;
 }
 
 #canvas {
-    position: absolute;
+    position: fixed;
     border: 4px solid white;
     border-radius: 0px;
     width: 100%;
 }
 
 #form {
-    position: absolute;
+    position: fixed;
     border: 4px solid white;
     border-radius: 0px;
 }
