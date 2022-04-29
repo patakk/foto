@@ -19,7 +19,7 @@
 
     <body id="rootElement">
         <!-- <img id="img" style="visibility:hidden;" src={{ img_path }} /> -->
-        <ul>
+        <ol>
             <!-- For loop logic of jinja template -->
             {%for i in range(0, nframes)%}
             <li>
@@ -30,11 +30,11 @@
                     <li><label>{{speeds[i]}}</label></li>
                     <li><label>{{apertures[i]}}</label></li>
                     <li><p style="height:50px"></li>
-                </li>ul>    
+                </ul>   
             </li>
             {%endfor%}
                 
-         </ul>
+         </ol>
 
          
         <label align="center" style="background:none;color:#EEEEEE;border:0px;font-size:22px;font-weight:bold;position:fixed;left:10px;bottom:20px;" onmousedown="goBack()">
