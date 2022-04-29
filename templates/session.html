@@ -32,10 +32,15 @@
         <label id="save-button" align="center">
             &nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;
         </label>
-        <label id="back-button" align="center">
+        <label align="center" style="background:none;border:0px;font-size:16px;position:absolute;left:50px;bottom:50px;" onmousedown="window.location.href='/foto'">
             <<
         </label>
 
+        #back-button {
+            background: none;
+            border: 0px;
+            font-size: 16px;
+        }
         <form id="form">
             <input type="text" id="userName" name="userName" placeholder="your unique name" style="width:75%" onkeypress="return event.charCode != 32">
             <input type="text" id="lname" name="lname" placeholder="unique roll name" style="width:75%" onkeypress="return event.charCode != 32">
