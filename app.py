@@ -81,12 +81,15 @@ def preview():
 @app.route("/previewRolls", methods=['GET', 'POST'])
 def previewRolls():
     if request.method == 'GET':
-        userName = request.values['userName']
-        userDir = './static/database/{}'.format(userName)
-        if not os.path.exists(userDir):
-            return render_template('preview.html')
-        rolls = os.listdir(userDir)
-        return render_template('previewRolls.html', rollslen=len(rolls), rolls=rolls)
+        if 'rollName' in request.values:
+            return render_template('roll.html')
+        else:
+            userName = request.values['userName']
+            userDir = './static/database/{}'.format(userName)
+            if not os.path.exists(userDir):
+                return render_template('preview.html')
+            rolls = os.listdir(userDir)
+            return render_template('previewRolls.html', rollslen=len(rolls), rolls=rolls)
 
     return render_template('preview.html')
  
