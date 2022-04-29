@@ -8,7 +8,7 @@ body {
 
 ul, a {
     font-size: 18px;
-    color: #202020;
+    color: #CCCCCC;
 }
 
 .txt {
@@ -45,12 +45,3 @@ li {
 li:hover {
     background: #f02222;
 }
-
-canvas {
-    border-style: solid;
-    border-width: 6px;
-    border-color: #222222;
-    z-index: -111;
-}
-
-
