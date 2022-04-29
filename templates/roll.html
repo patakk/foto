@@ -17,17 +17,22 @@
 
     <body id="rootElement">
         <!-- <img id="img" style="visibility:hidden;" src={{ img_path }} /> -->
-        <ol>
+        <ul>
             <!-- For loop logic of jinja template -->
             {%for i in range(0, nframes)%}
                 
                 <li>
-                    {{frames[i]}}
+                    <ul>
+                        {{films[i]}}
+                        {{isos[i]}}
+                        {{speeds[i]}}
+                        {{apertures[i]}}
+                    </ul>
                 </li>
             
             {%endfor%}
                 
-            </ol>
+         </ul>
     </body>
 
 </html>
