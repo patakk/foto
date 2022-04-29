@@ -42,8 +42,8 @@ function animationLoop(){
     submitLabel.addEventListener('touchstart', handleSubmitStart);
     submitLabel.addEventListener('touchend', handleSubmitEnd);
     
-    previewLabel.addEventListener('mousedown', handleSubmitStart);
-    previewLabel.addEventListener('mouseup', handleSubmitEnd);
+    submitLabel.addEventListener('mousedown', handleSubmitStart);
+    submitLabel.addEventListener('mouseup', handleSubmitEnd);
     window.requestAnimationFrame(animationLoop);
 }
        
