@@ -82,7 +82,14 @@ def preview():
 def previewRolls():
     if request.method == 'GET':
         if 'rollName' in request.values:
-            return render_template('roll.html')
+            userName = request.values['userName']
+            rollName = request.values['rollName']
+            rollDir = './static/database/{}/{}'.format(userName, rollName)
+            if not os.path.exists(userDir):
+                return render_template('preview.html')
+            frames = glob.glob(os.path.join(rollDir, '/*.json'))
+            frames = [json.load(open(frame)) for frame in frames]
+            return render_template('roll.html', nframes=len(frames), frames=frames)
         else:
             userName = request.values['userName']
             userDir = './static/database/{}'.format(userName)

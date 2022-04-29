@@ -1,1 +1,33 @@
-helllo
+<html lang=”en”>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Name of the app -->
+        <title>foto</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="static/roll.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+        <script type="text/javascript" src="static/roll.js"></script>
+        <link rel="shortcut icon" href="">
+
+    </head>
+
+    <body id="rootElement">
+        <!-- <img id="img" style="visibility:hidden;" src={{ img_path }} /> -->
+        <ol>
+            <!-- For loop logic of jinja template -->
+            {%for i in range(0, nframes)%}
+                
+                <li>
+                    {{frames[i]}}
+                </li>
+            
+            {%endfor%}
+                
+            </ol>
+    </body>
+
+</html>
