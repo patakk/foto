@@ -87,10 +87,9 @@ def previewRolls():
             rollDir = './static/database/{}/{}'.format(userName, rollName)
             if not os.path.exists(rollDir):
                 return render_template('preview.html')
-            frames = glob.glob(os.path.join(rollDir, '/*.json'))
+            frames = glob.glob(os.path.join(rollDir, '*.json'))
             frames = [json.load(open(frame)) for frame in frames]
-            print(frames)
-            return render_template('roll.html', nframess=len(frames), frames=frames)
+            return render_template('roll.html', nframes=len(frames), frames=frames)
         else:
             userName = request.values['userName']
             userDir = './static/database/{}'.format(userName)
