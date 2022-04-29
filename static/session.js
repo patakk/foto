@@ -17,7 +17,7 @@ function preventBehavior(e) {
 
 function requestSave(data_uri){
 
-    var userName = document.getElementById("fname").value;
+    var userName = document.getElementById("userName").value;
     var rollName = document.getElementById("lname").value;
     var filmName = document.getElementById("films").value;
     var isoValue = document.getElementById("iso").value;
@@ -202,7 +202,7 @@ function animationLoop(){
     }
 
 
-    document.getElementById("fname").style.width = width*.85 - 8 + "px";
+    document.getElementById("userName").style.width = width*.85 - 8 + "px";
     document.getElementById("lname").style.width = width*.85 - 8 + "px";
     document.getElementById("films").style.width = width*.85 - 8 + "px";
     document.getElementById("iso").style.width = width*.85 - 8 + "px";
