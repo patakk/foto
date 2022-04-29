@@ -2,7 +2,13 @@
 <!-- For loop logic of jinja template -->
 {%for i in range(0, rollslen)%}
     
-    <li>{{rolls[i]}}</li>
+
+    <li>
+        <label align="center">
+            {{rolls[i]}}
+        </label>
+    </li>
+    
 {%endfor%}
     
 </ol>
