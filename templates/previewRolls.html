@@ -19,16 +19,17 @@
         <!-- <img id="img" style="visibility:hidden;" src={{ img_path }} /> -->
         <ul>
             <!-- For loop logic of jinja template -->
-            {%for i in range(0, rollslen)%}
-                
-                <li>
-                    <a id="{{rolls[i]}}" onclick="handleRollClick(event)">
-                        {{rolls[i]}}
-                    </a>
-                </li>
-            
-            {%endfor%}
-                
+            <li>
+                {%for i in range(0, rollslen)%}
+                <ul>
+                    <li>
+                        <a id="{{rolls[i]}}" onclick="handleRollClick(event)">
+                            {{rolls[i]}}
+                        </a>
+                    </li>
+                </ul>
+                {%endfor%}
+            </li>
         </ul>
         
         <label align="center" style="background:none;color:#EEEEEE;border:0px;font-size:22px;font-weight:bold;position:fixed;left:10px;bottom:20px;" onmousedown="window.location.href='/foto/preview'">
