@@ -9,8 +9,10 @@ $(document).ready(function(){
         
 
     window.requestAnimationFrame(animationLoop);
+    console.log("xxx")
 
     if(window.innerWidth > window.innerHeight){
+        console.log("aaa")
         document.getElementById('rootElement').style.width = "800px";
     }
 
