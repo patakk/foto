@@ -93,6 +93,7 @@ def previewRolls():
             isos = [frame['iso'] for frame in frames]
             speeds = [frame['speed'] for frame in frames]
             apertures = [frame['aperture'] for frame in frames]
+            print(films)
             return render_template('roll.html', nframes=len(frames), films=films, isos=isos, speeds=speeds, apertures=apertures)
         else:
             userName = request.values['userName']
