@@ -44,6 +44,8 @@ ul {
     position: absolute;
     right: 0px;
     top: 0px;
+    width: 100%;
+    z-index: 1000;
 }
 
 li {
