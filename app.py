@@ -72,13 +72,8 @@ def hello():
 @app.route("/session", methods=['GET', 'POST'])
 def session():
     return render_template('session.html')
-    
-@app.route("/preview", methods=['GET', 'POST'])
-def preview():
-    return render_template('preview.html')
-    
 
-@app.route("/previewRolls", methods=['GET', 'POST'])
+@app.route("/preview", methods=['GET', 'POST'])
 def previewRolls():
     if request.method == 'GET':
         if 'rollName' in request.values:

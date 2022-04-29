@@ -14,7 +14,7 @@ function handleSubmitEnd(){
     var userName = document.getElementById("fname").value;
 
     
-    window.location.href = '/foto/previewRolls?userName=' + userName;
+    window.location.href = '/foto/preview?userName=' + userName;
 }
 
 function animationLoop(){
