@@ -9,6 +9,11 @@ function handleRollClick(e){
     window.location.href = '/foto/preview?userName=' + userName + "&rollName=" + e.srcElement.id;
 }
 
+function goBack() {
+    userName = window.location.search.split("&")[0].split("=")[1];
+    window.location.href = '/foto/preview?userName=' + userName;
+}
+
 function preventBehavior(e) {
     e.preventDefault(); 
 }; 
