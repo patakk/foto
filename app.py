@@ -89,6 +89,8 @@ def previewRolls():
                 return render_template('preview.html')
             frames = glob.glob(os.path.join(rollDir, '/*.json'))
             frames = [json.load(open(frame)) for frame in frames]
+            print(frames)
+            print(safas)
             return render_template('roll.html', nframes=len(frames), frames=frames)
         else:
             userName = request.values['userName']
