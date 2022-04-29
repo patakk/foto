@@ -22,7 +22,7 @@
             {%for i in range(0, rollslen)%}
                 
                 <li>
-                    <a onclick="handleRollClick(event)">
+                    <a id="{{rolls[i]}}" onclick="handleRollClick(event)">
                         {{rolls[i]}}
                     </a>
                 </li>
