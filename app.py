@@ -95,15 +95,15 @@ def previewRolls():
             apertures = [frame['aperture'] for frame in frames]
             imgs = [path.replace('.json', '.png') for path in framespaths]
             return render_template('roll.html', nframes=len(frames), imgs=imgs, films=films, isos=isos, speeds=speeds, apertures=apertures)
-        else:
+        else if 'userName' in request.values:
             userName = request.values['userName']
             userDir = './static/database/{}'.format(userName)
             if not os.path.exists(userDir):
                 return render_template('preview.html')
             rolls = os.listdir(userDir)
             return render_template('previewRolls.html', rollslen=len(rolls), rolls=rolls)
-
-    return render_template('preview.html')
+        else:
+            return render_template('preview.html')
  
 
 
