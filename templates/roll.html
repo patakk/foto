@@ -21,11 +21,11 @@
             <!-- For loop logic of jinja template -->
             {%for i in range(0, nframes)%}
                 
-            <img src="{{imgs[i]}}">
-            <label>{{films[i]}}</label>
-            <label>{{isos[i]}}</label>
-            <label>{{speeds[i]}}</label>
-            <label>{{apertures[i]}}</label>
+            <li><img src="{{imgs[i]}}"></li>
+            <li><label>{{films[i]}}</label></li>
+            <li><label>{{isos[i]}}</label></li>
+            <li><label>{{speeds[i]}}</label></li>
+            <li><label>{{apertures[i]}}</label></li>
             
             {%endfor%}
                 
