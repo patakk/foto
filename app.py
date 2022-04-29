@@ -82,7 +82,7 @@ def previewRolls():
             rollDir = './static/database/{}/{}'.format(userName, rollName)
             if not os.path.exists(rollDir):
                 return render_template('preview.html')
-            framespaths = glob.glob(os.path.join(rollDir, '*.json'))
+            framespaths = list(sorted(glob.glob(os.path.join(rollDir, '*.json'))))
             frames = [json.load(open(frame)) for frame in framespaths]
             films = [frame['film'] for frame in frames]
             isos = [frame['iso'] for frame in frames]
