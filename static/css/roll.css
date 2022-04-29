@@ -5,7 +5,7 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
-ul, a {
+ul, ol, a {
     font-size: 18px;
     color: #EEEEEE;
 }
