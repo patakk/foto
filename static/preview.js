@@ -41,6 +41,9 @@ function animationLoop(){
 
     submitLabel.addEventListener('touchstart', handleSubmitStart);
     submitLabel.addEventListener('touchend', handleSubmitEnd);
+    
+    previewLabel.addEventListener('mousedown', handleSubmitStart);
+    previewLabel.addEventListener('mouseup', handleSubmitEnd);
     window.requestAnimationFrame(animationLoop);
 }
        
@@ -50,6 +53,7 @@ function preventBehavior(e) {
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
         
+
     window.requestAnimationFrame(animationLoop);
 
     //var path = document.getElementById('img').src;
