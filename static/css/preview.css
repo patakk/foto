@@ -4,7 +4,7 @@ body {
     margin: 0px;
 }
 
-label {
+.mylabel {
     position: absolute;
     font-family: "Roboto Mono", sans-serif;
     font-size: 12px;
