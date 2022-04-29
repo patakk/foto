@@ -11,7 +11,7 @@ function handleSubmitEnd(){
     submitLabel.style.background = "#101010";
     submitLabel.style.color = "#FFFFFF";
 
-    var userName = document.getElementById("fname").value;
+    var userName = document.getElementById("userName").value;
 
     
     window.location.href = '/foto/preview?userName=' + userName;
@@ -20,7 +20,7 @@ function handleSubmitEnd(){
 function animationLoop(){
     
     form = document.getElementById("form");
-    nameLabel = document.getElementById("fname");
+    nameLabel = document.getElementById("userName");
     submitLabel = document.getElementById("submit-button");
 
     var nameRect = nameLabel.getBoundingClientRect();
