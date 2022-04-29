@@ -5,7 +5,8 @@ var submitLabel = null;
 
 function handleRollClick(e){
     
-    window.location.href = '/foto/previewRolls?userName=' + e.srcElement.id;
+    console.log(window.location.search);
+    //window.location.href = '/foto/previewRolls?userName=' + e.srcElement.id;
 }
 
 function preventBehavior(e) {
