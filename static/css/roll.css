@@ -28,7 +28,7 @@ ul, a {
 }
 
 img {
-    width: 20px;
+    width: 100%;
 }
 
 ul {
@@ -43,7 +43,7 @@ li {
 }
 
 li:hover {
-    background: #f02222;
+    
 }
 
 canvas {
