@@ -87,14 +87,14 @@ def previewRolls():
             rollDir = './static/database/{}/{}'.format(userName, rollName)
             if not os.path.exists(rollDir):
                 return render_template('preview.html')
-            frames = glob.glob(os.path.join(rollDir, '*.json'))
-            frames = [json.load(open(frame)) for frame in frames]
+            framespaths = glob.glob(os.path.join(rollDir, '*.json'))
+            frames = [json.load(open(frame)) for frame in framespaths]
             films = [frame['film'] for frame in frames]
             isos = [frame['iso'] for frame in frames]
             speeds = [frame['speed'] for frame in frames]
             apertures = [frame['aperture'] for frame in frames]
-            print(films)
-            return render_template('roll.html', nframes=len(frames), films=films, isos=isos, speeds=speeds, apertures=apertures)
+            imgpaths = [path.replace('.json', '.png') for path in framespaths]
+            return render_template('roll.html', nframes=len(frames), imgpaths=imgpaths, films=films, isos=isos, speeds=speeds, apertures=apertures)
         else:
             userName = request.values['userName']
             userDir = './static/database/{}'.format(userName)
