@@ -210,6 +210,13 @@ function animationLoop(){
         form.style.width = width*.85 + "px";
         form.style.position = "absolute";
         var formRect = form.getBoundingClientRect();
+
+        if(window.innerHeight < innerH){
+            form.style.left = width*.075 + "px";
+            form.style.bottom = innerH*0.1 + "px";
+            form.style.width = width*.85 + "px";
+            form.style.position = "absolute";
+        }
     
         var saveRect = saveLabel.getBoundingClientRect();
         saveLabel.style.top = formRect['bottom']*1. + innerH*0.02 + "px";
