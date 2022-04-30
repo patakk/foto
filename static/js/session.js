@@ -286,7 +286,7 @@ $(document).ready(function(){
     Webcam.attach( '#player' );
     
     document.getElementById('player').style.opacity = 0;
-    document.getElementById('rootElement').addEventListener('focusout', function(e) {window.scrollTo(0, 0)});
+    document.getElementById('rootElement').addEventListener('focusout', function(e) {window.scrollTo(0, 330)});
 
     window.requestAnimationFrame(animationLoop);
     //var path = document.getElementById('img').src;
