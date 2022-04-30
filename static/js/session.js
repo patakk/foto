@@ -93,7 +93,7 @@ function takepicture() {
 
   function handleSnapStart(){
     snapLabel.style.background = "#FFFFFF";
-    snapLabel.style.color = "#FF0000";
+    snapLabel.style.color = "#101010";
 }
 
 function handleBackStart(){
@@ -157,12 +157,12 @@ function animationLoop(){
     if(timer <= 0){
         if(snap){
             saveLabel.style.background = "#121212";
-            snapLabel.style.background = "#121212";
+            //snapLabel.style.background = "#121212";
             snapLabel.innerHTML = 'NEW FRAME'
         }
         else{
             saveLabel.style.background = "#777777";
-            snapLabel.style.background = "#121212";
+            //snapLabel.style.background = "#121212";
             snapLabel.innerHTML = 'SHOOT!'
             snapsnap = true;
         }
