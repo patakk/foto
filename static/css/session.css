@@ -89,7 +89,7 @@ ul {
     padding: 0;
     list-style-type: square;
     list-style: none;
-    column-gap: 0px;
+    column-gap: 20px;
 }
 
 .mainList {
