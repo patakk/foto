@@ -156,9 +156,6 @@ if (hasGetUserMedia()) {
 }
 
 function animationLoop(){
-    
-    if(!displayDefault)
-        displayDefault = canvas.style.display;
 
     //innerH = window.innerHeight;
     document.getElementById("rootElement").style.height = innerH + "px";
@@ -199,9 +196,9 @@ function animationLoop(){
             saveLabel.style.display = "none";
         }
         else{
-            canvas.style.display = displayDefault;
-            snapLabel.style.display = displayDefault;
-            saveLabel.style.display = displayDefault;
+            canvas.style.display = "inline";
+            snapLabel.style.display = "inline";
+            saveLabel.style.display = "inline";
         }
 
         snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
