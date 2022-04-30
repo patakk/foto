@@ -166,7 +166,7 @@ function animationLoop(){
             //saveLabel.style.background = "#777777";
             saveLabel.style.color = "#373737";
             saveLabel.style.borderColor = "#373737";
-            //snapLabel.style.background = "#121212";
+            snapLabel.style.background = "#121212";
             snapLabel.innerHTML = 'SHOOT!'
             snapsnap = true;
         }
