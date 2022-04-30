@@ -19,7 +19,6 @@ body {
     text-align: center;
     z-index: +1000;
     overflow: hidden;
-    width: calc(100% - 16px);
     padding-top: 12px;
     padding-bottom: 12px;
 }
