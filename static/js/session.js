@@ -85,7 +85,6 @@ function takepicture() {
             photo = document.getElementById('photo');
         }
         context.drawImage(video, 0, -460, 480, 640+460); 
-        makeGray();
         //var data = canvas.toDataURL('image/png');
         //photo.setAttribute('src', data);
     }
