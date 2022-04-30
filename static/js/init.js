@@ -39,6 +39,25 @@ function reportWindowSize() {
         window.location.href='/foto/preview';
     }
     else{
+        previewLabel = document.getElementById("preview-button");
+        sessionLabel = document.getElementById("session-button");
+    
+        var sessionRect = sessionLabel.getBoundingClientRect();
+        var previewRect = previewLabel.getBoundingClientRect();
+    
+        sessionLabel.style.left = window.innerWidth/2 - sessionRect['width']/2 + "px";
+        sessionLabel.style.top = window.innerHeight/2 - sessionRect['height'] - 5 + "px";
+        previewLabel.style.left = window.innerWidth/2 - previewRect['width']/2 + "px";
+        previewLabel.style.top = window.innerHeight/2 + 5 + "px"
+        sessionLabel.addEventListener('touchstart', handleSessionStart);
+        sessionLabel.addEventListener('touchend', handleSessionEnd);
+        previewLabel.addEventListener('touchstart', handlePreviewStart);
+        previewLabel.addEventListener('touchend', handlePreviewEnd);
+        previewLabel.addEventListener('mousedown', handlePreviewStart);
+        previewLabel.addEventListener('mouseup', handlePreviewEnd);
+    
+        sessionLabel.style.visibility = "visible";
+        previewLabel.style.visibility = "visible";
     }
   }
   
@@ -48,26 +67,6 @@ $(document).ready(function(){
     window.onresize = reportWindowSize;
 
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
-        
-    previewLabel = document.getElementById("preview-button");
-    sessionLabel = document.getElementById("session-button");
-
-    var sessionRect = sessionLabel.getBoundingClientRect();
-    var previewRect = previewLabel.getBoundingClientRect();
-
-    sessionLabel.style.left = window.innerWidth/2 - sessionRect['width']/2 + "px";
-    sessionLabel.style.top = window.innerHeight/2 - sessionRect['height'] - 5 + "px";
-    previewLabel.style.left = window.innerWidth/2 - previewRect['width']/2 + "px";
-    previewLabel.style.top = window.innerHeight/2 + 5 + "px"
-    sessionLabel.addEventListener('touchstart', handleSessionStart);
-    sessionLabel.addEventListener('touchend', handleSessionEnd);
-    previewLabel.addEventListener('touchstart', handlePreviewStart);
-    previewLabel.addEventListener('touchend', handlePreviewEnd);
-    previewLabel.addEventListener('mousedown', handlePreviewStart);
-    previewLabel.addEventListener('mouseup', handlePreviewEnd);
-
-    sessionLabel.style.visibility = "visible";
-    previewLabel.style.visibility = "visible";
 
     reportWindowSize();
     //window.requestAnimationFrame(animationLoop);
