@@ -190,8 +190,6 @@ function animationLoop(){
         timer = timer - 33;
     }
     
-    saveLabel.style.visibility = "visible";
-    snapLabel.style.visibility = "visible";
   
     width = window.innerWidth;
     height = window.innerWidth*3/4;
