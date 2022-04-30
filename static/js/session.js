@@ -93,7 +93,7 @@ function takepicture() {
 
   function handleSnapStart(){
     //snapLabel.style.background = "#FFFFFF";
-    //snapLabel.style.color = "#FF0000";
+    //snapLabel.style.color = "#121212";
 }
 
 function handleBackStart(){
@@ -110,18 +110,18 @@ function handleSaveStart(){
 }
 
 function handleSnapEnd(){
-    snapLabel.style.background = "#FF0000";
+    snapLabel.style.background = "#121212";
     snapLabel.style.color = "#FFFFFF"; 
     //Webcam.snap( function(data_uri) {
     //    document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
     //} );
     if(!snap){
-        snapLabel.style.background = "#FF0000";
+        snapLabel.style.background = "#121212";
         snapLabel.innerHTML = 'NEW FRAME';
         snapsnap = false;
     }
     else{
-        snapLabel.style.background = "#FF0000";
+        snapLabel.style.background = "#121212";
         snapLabel.innerHTML = 'SHOOT!'
     }
     snap = !snap;
@@ -156,13 +156,13 @@ function animationLoop(){
 
     if(timer <= 0){
         if(snap){
-            saveLabel.style.background = "#FF0000";
-            snapLabel.style.background = "#FF0000";
+            saveLabel.style.background = "#121212";
+            snapLabel.style.background = "#121212";
             snapLabel.innerHTML = 'NEW FRAME'
         }
         else{
             saveLabel.style.background = "#777777";
-            snapLabel.style.background = "#FF0000";
+            snapLabel.style.background = "#121212";
             snapLabel.innerHTML = 'SHOOT!'
             snapsnap = true;
         }
