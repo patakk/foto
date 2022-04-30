@@ -84,16 +84,8 @@ function takepicture() {
             video = document.querySelector('video');
             photo = document.getElementById('photo');
         }
-        context.drawImage(video, 0, -460, 480, 640+460);
-        const imgData = context.getImageData(0, 0, canvas.width, canvas.height);
-        for (i = 0; i < imgData.data.length; i += 4) {
-            let colour = (0.2126*imgData.data[i] + 0.7152*imgData.data[i + 1] + 0.0722*imgData.data[i + 2])
-            imgData.data[i] = colour;
-            imgData.data[i + 1] = colour;
-            imgData.data[i + 2] = colour;
-            imgData.data[i + 3] = 255;
-        }
-        context.putImageData(imgData, 0, 0);
+        context.drawImage(video, 0, -460, 480, 640+460); 
+        makeGray();
         //var data = canvas.toDataURL('image/png');
         //photo.setAttribute('src', data);
     }
@@ -223,6 +215,18 @@ function animationLoop(){
     window.requestAnimationFrame(animationLoop);
 }
 
+function makeGray(){
+    const imgData = context.getImageData(0, 0, canvas.width, canvas.height);
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let colour = (0.2126*imgData.data[i] + 0.7152*imgData.data[i + 1] + 0.0722*imgData.data[i + 2])
+        imgData.data[i] = colour;
+        imgData.data[i + 1] = colour;
+        imgData.data[i + 2] = colour;
+        imgData.data[i + 3] = 255;
+    }
+    context.putImageData(imgData, 0, 0);
+}
+
 $(document).ready(function(){
     //document.addEventListener("touchmove", preventBehavior, {passive: false}); 
     
@@ -236,6 +240,11 @@ $(document).ready(function(){
     saveLabel.addEventListener('touchend', handleSaveEnd);
 
     //document.getElementById("back-button").addEventListener('touchstart', handleBackStart);
+
+    document.getElementById("films").addEventListener('change', function() {
+        if(document.getElementById("films").value.includes("Ilford"))
+            makeGray();
+    });
 
     innerH = window.innerHeight;
     
