@@ -85,8 +85,6 @@ select {
   }
   
 ul {
-    margin-left: 15px;
-    margin-right: 15px;
     padding: 0;
     list-style-type: square;
     list-style: none;
