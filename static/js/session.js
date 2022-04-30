@@ -183,7 +183,6 @@ function animationLoop(){
             saveLabel.style.color = "#FFFFFF";
             saveLabel.innerHTML = "SAVED!";
         }
-        snap = false;
         timer = timer - 33;
     }
 
