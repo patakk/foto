@@ -40,6 +40,7 @@ ul {
 
 li {
     margin: 8px 0;
+    background: #ff00ff;
 }
 
 li:hover {
