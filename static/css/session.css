@@ -22,12 +22,10 @@ body {
     position: absolute;
     z-index: +1000;
     overflow: hidden;
-    position: fixed;
 }
 
 .mylabel {
     overflow: hidden;
-    position: fixed;
     font-family: "Roboto Mono", sans-serif;
     font-size: 16px;
     color: #EEEEEE;
