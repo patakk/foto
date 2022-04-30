@@ -157,6 +157,7 @@ function animationLoop(){
 
     var userName = document.getElementById("userName").value;
     var rollName = document.getElementById("lname").value;
+    saveLabel.innerHTML = userName + " " + userName;
     if(timer <= 0){
         if(snap){
             saveLabel.style.background = "#121212";
