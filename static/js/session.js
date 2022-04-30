@@ -70,10 +70,10 @@ function takepicture() {
             canvas = document.getElementById('canvas');
             canvas.width = 480;
             canvas.height = 640;
-            canvas.style.width = width*.85 + "px";
-            canvas.style.height = height*.85 + "px";
-            canvas.style.left = width*(1-.85)/2 + "px";
-            canvas.style.top = height*(1-.85)/2 + "px";
+            //canvas.style.width = width*.85 + "px";
+            //canvas.style.height = height*.85 + "px";
+            //canvas.style.left = width*(1-.85)/2 + "px";
+            //canvas.style.top = height*(1-.85)/2 + "px";
             context = canvas.getContext('2d');
             video = document.querySelector('video');
             photo = document.getElementById('photo');
@@ -202,23 +202,23 @@ function animationLoop(){
             saveLabel.style.display = "inline-block";
         }
 
-        snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
+        //snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
         var snapRect = snapLabel.getBoundingClientRect();
-        snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
-        snapLabel.style.position = "absolute";
+        //snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
+        //snapLabel.style.position = "absolute";
         snapLabel.style.width = "100px";
         saveLabel.style.width = "100px";
         
-        form.style.left = width*.075 + "px";
-        form.style.top = snapRect["bottom"] + innerH*0.02 + "px";
-        form.style.width = width*.85 + "px";
-        form.style.position = "absolute";
+        //form.style.left = width*.075 + "px";
+        //form.style.top = snapRect["bottom"] + innerH*0.02 + "px";
+        //form.style.width = width*.85 + "px";
+        //form.style.position = "absolute";
         var formRect = form.getBoundingClientRect();
     
         var saveRect = saveLabel.getBoundingClientRect();
-        saveLabel.style.top = formRect['bottom']*1. + innerH*0.02 + "px";
-        saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
-        saveLabel.style.position = "absolute";
+        //saveLabel.style.top = formRect['bottom']*1. + innerH*0.02 + "px";
+        //saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
+        //saveLabel.style.position = "absolute";
         //document.getElementById("back-button").style.top = formRect['bottom']*1. + innerH*0.02 + "px";
         //document.getElementById("back-button").style.left = "10px";
     }
