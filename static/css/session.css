@@ -82,6 +82,7 @@ select {
     box-sizing: border-box;
     border: 0px;
     border-radius: 0px;
+    color: #101010;
   }
   
 ul {
@@ -94,8 +95,4 @@ ul {
 
 .mainList {
     margin-bottom: 25px;
-}
-
-option {
-    color: #101010;
 }
