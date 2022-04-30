@@ -3,7 +3,9 @@ body {
     background: #1124d6;
     margin: 0px;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
 
 #save-button, #snap-button {
