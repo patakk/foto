@@ -106,7 +106,6 @@ function handleSaveStart(){
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "SAVING...";
-    timer = 800;
     requestSave(canvas.toDataURL('image/png'));
 }
 
@@ -131,6 +130,7 @@ function handleSnapEnd(){
 function handleSaveEnd(){
     if(!snap)
         return;
+    timer = 800;
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "SAVING...";
