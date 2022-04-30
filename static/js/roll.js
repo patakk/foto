@@ -7,12 +7,23 @@ function preventBehavior(e) {
     e.preventDefault(); 
 };
 
+function reportWindowSize() {
+    if(window.innerWidth > window.innerHeight){
+        document.getElementById('rootElement').style.width = "800px";
+    }
+  }
+  
+
 
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
         
 
+    window.onresize = reportWindowSize;
+    console.log("xxx")
+
     if(window.innerWidth > window.innerHeight){
+        console.log("aaa")
         document.getElementById('rootElement').style.width = "800px";
     }
 
