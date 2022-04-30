@@ -179,6 +179,13 @@ function animationLoop(){
     else{
         timer = timer - 33;
     }
+    
+    if(window.innerHeight > innerH){
+        document.getElementById('rootElement').style.display = "none";
+    }
+    else{
+        document.getElementById('rootElement').style.display = "block";
+    }
   
     width = window.innerWidth;
     height = window.innerWidth*3/4;
@@ -237,13 +244,6 @@ function makeGray(){
 
 function reportWindowSize() {
     //document.getElementById('rootElement').style.display = "none";
-    snapLabel.innerHTML = Math.random();
-    if(window.innerHeight > innerH){
-        document.getElementById('rootElement').style.display = "none";
-    }
-    else{
-        document.getElementById('rootElement').style.display = "block";
-    }
 }
   
 $(document).ready(function(){
