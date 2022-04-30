@@ -179,9 +179,7 @@ function animationLoop(){
     else{
         timer = timer - 33;
     }
-    snapLabel.innerHTML = window.innerHeight;
   
-
     width = window.innerWidth;
     height = window.innerWidth*3/4;
 
@@ -238,7 +236,8 @@ function makeGray(){
 }
 
 function reportWindowSize() {
-    document.getElementById('rootElement').style.display = "none";
+    //document.getElementById('rootElement').style.display = "none";
+    snapLabel.innerHTML = Math.random();
     if(window.innerHeight > innerH){
         document.getElementById('rootElement').style.display = "none";
     }
