@@ -32,7 +32,7 @@ function animationLoop(){
     //form.style.top = window.innerHeight*.5 + "px";
     //form.style.width = width*.85 + "px";
     var formRect = form.getBoundingClientRect();
-    nameLabel.style.width = "100%";
+    nameLabel.style.width = "calc(100% - 8px)";
 
     //submitLabel.style.position = "absolute";
     //submitLabel.style.left = width*.075 + "px";
