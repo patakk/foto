@@ -26,6 +26,31 @@ function handlePreviewEnd(){
 
 function animationLoop(){
     
+
+window.requestAnimationFrame(animationLoop);
+}
+       
+function preventBehavior(e) {
+    e.preventDefault(); 
+}; 
+
+function reportWindowSize() {
+    if(window.innerWidth > window.innerHeight){
+        sessionLabel.style.color = "#373737";
+        sessionLabel.style.borderColor = "#373737";
+        sessionLabel.style.background = "#121212";
+    }
+    else{
+    }
+  }
+  
+
+
+$(document).ready(function(){
+    window.onresize = reportWindowSize;
+
+    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+        
     previewLabel = document.getElementById("preview-button");
     sessionLabel = document.getElementById("session-button");
 
@@ -46,16 +71,8 @@ function animationLoop(){
     sessionLabel.style.visibility = "visible";
     previewLabel.style.visibility = "visible";
 
-window.requestAnimationFrame(animationLoop);
-}
-       
-function preventBehavior(e) {
-    e.preventDefault(); 
-}; 
-$(document).ready(function(){
-    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
-        
-    window.requestAnimationFrame(animationLoop);
+    reportWindowSize();
+    //window.requestAnimationFrame(animationLoop);
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
