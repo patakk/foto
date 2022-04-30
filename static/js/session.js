@@ -181,10 +181,14 @@ function animationLoop(){
     }
     
     if(window.innerHeight < innerH){
-        document.getElementById('rootElement').style.display = "none";
+        canvas.style.display = "none";
+        snapLabel.style.display = "none";
+        saveLabel.style.display = "none";
     }
     else{
-        document.getElementById('rootElement').style.display = "block";
+        canvas.style.display = "block";
+        snapLabel.style.display = "block";
+        saveLabel.style.display = "block";
     }
   
     width = window.innerWidth;
