@@ -21,7 +21,6 @@ function reportWindowSize() {
 
 
 $(document).ready(function(){
-    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
         
 
     window.onresize = reportWindowSize;
