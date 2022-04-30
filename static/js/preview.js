@@ -13,7 +13,7 @@ function handleSubmitEnd(){
 
     var userName = document.getElementById("userName").value;
 
-    if(value.length > 0)
+    if(userName.length > 0)
         window.location.href = '/foto/preview?userName=' + userName;
 }
 
