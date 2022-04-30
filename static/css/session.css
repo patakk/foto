@@ -21,7 +21,7 @@ body {
     overflow: hidden;
     padding-top: 12px;
     padding-bottom: 12px;
-    width: calc(80% - 8px);
+    width: calc(100% - 8px);
 }
 
 
