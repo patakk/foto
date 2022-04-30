@@ -92,8 +92,8 @@ function takepicture() {
   }
 
   function handleSnapStart(){
-    //snapLabel.style.background = "#FFFFFF";
-    //snapLabel.style.color = "#121212";
+    snapLabel.style.background = "#FFFFFF";
+    snapLabel.style.color = "#121212";
 }
 
 function handleBackStart(){
