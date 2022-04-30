@@ -155,7 +155,7 @@ if (hasGetUserMedia()) {
 }
 
 function animationLoop(){
-    innerH = window.innerHeight;
+    //innerH = window.innerHeight;
     document.getElementById("rootElement").style.height = innerH + "px";
 
     var width, height, rect;
@@ -235,9 +235,22 @@ function makeGray(){
     context.putImageData(imgData, 0, 0);
 }
 
+function reportWindowSize() {
+    if(window.innerWidth > window.innerHeight){
+        document.getElementById('rootElement').style.width = "800px";
+        document.getElementById('rootElement').style.margin = "auto";
+    }
+    else{
+        document.getElementById('rootElement').style.width = "100%";
+        document.getElementById('rootElement').style.margin = "0px";
+    }
+}
+  
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
     
+    window.onresize = reportWindowSize;
+
     form = document.getElementById("form");
     snapLabel = document.getElementById("snap-button");
     snapLabel.addEventListener('touchstart', handleSnapStart);
