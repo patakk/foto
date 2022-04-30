@@ -156,14 +156,14 @@ function animationLoop(){
     var width, height, rect;
 
     if(timer <= 0){
-        if(snap){
+        if(snap && userName.length > 0 && rollName.length > 0){
             saveLabel.style.background = "#121212";
             //snapLabel.style.background = "#121212";
             saveLabel.style.color = "#FFFFFF"; 
             saveLabel.style.borderColor = "#EEEEEE";
             snapLabel.innerHTML = 'NEW FRAME'
         }
-        else if((userName+rollName).length == 0){
+        else {
             //saveLabel.style.background = "#777777";
             saveLabel.style.color = "#373737";
             saveLabel.style.borderColor = "#373737";
@@ -189,7 +189,6 @@ function animationLoop(){
 
     var userName = document.getElementById("userName").value;
     var rollName = document.getElementById("lname").value;
-    saveLabel.innerHTML = (userName+rollName).length;
   
     width = window.innerWidth;
     height = window.innerWidth*3/4;
