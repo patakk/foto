@@ -9,6 +9,7 @@ function preventBehavior(e) {
 
 function reportWindowSize() {
     if(window.innerWidth > window.innerHeight){
+        console.log("aaa")
         document.getElementById('rootElement').style.width = "800px";
     }
   }
@@ -20,10 +21,8 @@ $(document).ready(function(){
         
 
     window.onresize = reportWindowSize;
-    console.log("xxx")
 
     if(window.innerWidth > window.innerHeight){
-        console.log("aaa")
         document.getElementById('rootElement').style.width = "800px";
     }
 
