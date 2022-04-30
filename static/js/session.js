@@ -87,10 +87,7 @@ function takepicture() {
         context.drawImage(video, 0, -460, 480, 640+460);
         const imgData = context.getImageData(0, 0, canvas.width, canvas.height);
         for (i = 0; i < imgData.data.length; i += 4) {
-            let count = imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2];
-            let colour = 0;
-            if (count > 510) colour = 255;
-            else if (count > 255) colour = 127.5;
+            let colour = (0.2126*imgData.data[i] + 0.7152*imgData.data[i + 1] + 0.0722*imgData.data[i + 2])
             imgData.data[i] = colour;
             imgData.data[i + 1] = colour;
             imgData.data[i + 2] = colour;
