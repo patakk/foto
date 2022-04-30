@@ -212,10 +212,10 @@ function animationLoop(){
         var formRect = form.getBoundingClientRect();
 
         if(window.innerHeight < innerH){
-            form.style.left = width*.075 + "px";
-            form.style.bottom = innerH*0.1 + "px";
-            form.style.width = width*.85 + "px";
-            form.style.position = "absolute";
+            document.getElementById("userName").style.left = width*.075 + "px";
+            document.getElementById("userName").style.bottom = innerH*0.1 + "px";
+            document.getElementById("userName").style.width = width*.85 + "px";
+            document.getElementById("userName").style.position = "absolute";
         }
     
         var saveRect = saveLabel.getBoundingClientRect();
