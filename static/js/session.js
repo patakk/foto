@@ -157,6 +157,9 @@ if (hasGetUserMedia()) {
 
 function animationLoop(){
     
+    if(!displayDefault)
+        displayDefault = canvas.style.display;
+
     //innerH = window.innerHeight;
     document.getElementById("rootElement").style.height = innerH + "px";
 
@@ -188,9 +191,6 @@ function animationLoop(){
     try{
         if(!canvasRect)
             canvasRect = canvas.getBoundingClientRect();
-
-        if(!displayDefault)
-            displayDefault = canvas.style.display;
     
         document.getElementById("lname").value = displayDefault;
         if(window.innerHeight < innerH){
