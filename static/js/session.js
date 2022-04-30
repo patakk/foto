@@ -105,7 +105,7 @@ function handleSaveStart(){
         return;
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
-    saveLabel.innerHTML = "&nbsp;SAVING...";
+    saveLabel.innerHTML = "SAVING...";
     timer = 800;
 }
 
@@ -117,12 +117,12 @@ function handleSnapEnd(){
     //} );
     if(!snap){
         snapLabel.style.background = "#101010";
-        snapLabel.innerHTML = '&nbsp;NEW FRAME';
+        snapLabel.innerHTML = 'NEW FRAME';
         snapsnap = false;
     }
     else{
         snapLabel.style.background = "#101010";
-        snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
+        snapLabel.innerHTML = 'SHOOT!'
     }
     snap = !snap;
 }
@@ -132,7 +132,7 @@ function handleSaveEnd(){
         return;
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
-    saveLabel.innerHTML = "&nbsp;SAVING...";
+    saveLabel.innerHTML = "SAVING...";
     requestSave(canvas.toDataURL('image/png'));
 }
 
@@ -158,27 +158,27 @@ function animationLoop(){
         if(snap){
             saveLabel.style.background = "#101010";
             snapLabel.style.background = "#101010";
-            snapLabel.innerHTML = '&nbsp;NEW FRAME'
+            snapLabel.innerHTML = 'NEW FRAME'
         }
         else{
             saveLabel.style.background = "#777777";
             snapLabel.style.background = "#101010";
-            snapLabel.innerHTML = '&nbsp;&nbsp;SHOOT!&nbsp;&nbsp;'
+            snapLabel.innerHTML = 'SHOOT!'
             snapsnap = true;
         }
         saveLabel.style.color = "#FFFFFF"; 
-        saveLabel.innerHTML = "&nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;";
+        saveLabel.innerHTML = "SAVE";
     }
     else{
         if(timer > 400){
             saveLabel.style.background = "#2080FF";
             saveLabel.style.color = "#FFFFFF"; 
-            saveLabel.innerHTML = "&nbsp;SAVING...";
+            saveLabel.innerHTML = "SAVING...";
         }
         else{
             saveLabel.style.background = "#20CCAA";
             saveLabel.style.color = "#FFFFFF";
-            saveLabel.innerHTML = "&nbsp;&nbsp;SAVED!&nbsp;&nbsp;";
+            saveLabel.innerHTML = "SAVED!";
         }
         timer = timer - 33;
     }
@@ -206,8 +206,8 @@ function animationLoop(){
         var snapRect = snapLabel.getBoundingClientRect();
         //snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
         //snapLabel.style.position = "absolute";
-        //snapLabel.style.width = "100px";
-        //saveLabel.style.width = "100px";
+        snapLabel.style.width = "calc(100% - 8px)";
+        saveLabel.style.width = "calc(100% - 8px)";
         
         //form.style.left = width*.075 + "px";
         //form.style.top = snapRect["bottom"] + innerH*0.02 + "px";
