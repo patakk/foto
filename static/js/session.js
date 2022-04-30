@@ -181,11 +181,11 @@ function animationLoop(){
     }
     
     if(window.innerHeight < innerH){
+        canvas.style.display = "none";
+        snapLabel.style.display = "none";
+        saveLabel.style.display = "none";
     }
     else{
-        canvas.style.display = "inline";
-        snapLabel.style.display = "inline";
-        saveLabel.style.display = "inline";
     }
   
     width = window.innerWidth;
