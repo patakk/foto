@@ -188,15 +188,18 @@ function animationLoop(){
         snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
         var snapRect = snapLabel.getBoundingClientRect();
         snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
+        snapLabel.style.position = "absolute";
         
         form.style.left = width*.075 + "px";
         form.style.top = snapRect["bottom"] + innerH*0.02 + "px";
         form.style.width = width*.85 + "px";
+        form.style.position = "absolute";
         var formRect = form.getBoundingClientRect();
     
         var saveRect = saveLabel.getBoundingClientRect();
         saveLabel.style.top = formRect['bottom']*1. + innerH*0.02 + "px";
         saveLabel.style.left = window.innerWidth*0.5 - saveRect["width"]/2;
+        saveLabel.style.position = "absolute";
         //document.getElementById("back-button").style.top = formRect['bottom']*1. + innerH*0.02 + "px";
         //document.getElementById("back-button").style.left = "10px";
     }
