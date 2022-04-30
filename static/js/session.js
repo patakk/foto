@@ -229,13 +229,6 @@ function animationLoop(){
         //document.getElementById("message").innerHTML = err.message;
     }
 
-    document.getElementById("userName").style.width = width*.85 - 8 + "px";
-    document.getElementById("lname").style.width = width*.85 - 8 + "px";
-    document.getElementById("films").style.width = width*.85 - 8 + "px";
-    document.getElementById("iso").style.width = width*.85 - 8 + "px";
-    document.getElementById("shutterspeed").style.width = width*.85 - 8 + "px";
-    document.getElementById("aperture").style.width = width*.85 - 8 + "px";
-
     if(!snap && snapsnap)
         takepicture();
     
@@ -280,6 +273,13 @@ $(document).ready(function(){
             document.getElementById("films").value.includes("T-Max"))
             makeGray();
     });
+
+    document.getElementById("userName").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("lname").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("films").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("iso").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("shutterspeed").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("aperture").style.width = window.innerWidth*.85 - 8 + "px";
 
     innerH = window.innerHeight;
     
