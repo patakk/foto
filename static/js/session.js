@@ -134,6 +134,7 @@ function handleSaveEnd(){
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "SAVING...";
+    snap = false;
 }
 
 
