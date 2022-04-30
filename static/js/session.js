@@ -155,6 +155,8 @@ if (hasGetUserMedia()) {
 }
 
 function animationLoop(){
+    
+    snapLabel.innerHTML = window.innerHeight;
     //innerH = window.innerHeight;
     document.getElementById("rootElement").style.height = innerH + "px";
 
