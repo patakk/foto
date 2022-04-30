@@ -216,7 +216,7 @@ function animationLoop(){
 }
 
 $(document).ready(function(){
-    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+    //document.addEventListener("touchmove", preventBehavior, {passive: false}); 
     
     form = document.getElementById("form");
     snapLabel = document.getElementById("snap-button");
