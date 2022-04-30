@@ -17,12 +17,12 @@ body {
     border-radius: 0px;
     margin: 0px;
     text-align: center;
+    align: center;
     z-index: +1000;
     overflow: hidden;
     padding-top: 12px;
     padding-bottom: 12px;
     width: calc(80% - 8px);
-    margin-left: auto;
 }
 
 
