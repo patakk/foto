@@ -180,6 +180,8 @@ function animationLoop(){
     else{
         timer = timer - 33;
     }
+
+    snapLabel.innerHTML = displayDefault;
     
   
     width = window.innerWidth;
