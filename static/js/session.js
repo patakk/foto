@@ -187,23 +187,9 @@ function animationLoop(){
     }
 
   
-    width = window.innerWidth;
-    height = window.innerWidth*3/4;
-
     try{
         if(!canvasRect)
             canvasRect = canvas.getBoundingClientRect();
-    
-        if(window.innerHeight < innerH){
-            canvas.style.display = "none";
-            snapLabel.style.display = "none";
-            saveLabel.style.display = "none";
-        }
-        else{
-            canvas.style.display = "inline-block";
-            snapLabel.style.display = "inline-block";
-            saveLabel.style.display = "inline-block";
-        }
 
         //snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
         var snapRect = snapLabel.getBoundingClientRect();
@@ -228,7 +214,6 @@ function animationLoop(){
     catch(err) {
         //document.getElementById("message").innerHTML = err.message;
     }
-
 
     if(!snap && snapsnap)
         takepicture();
@@ -268,20 +253,19 @@ $(document).ready(function(){
 
     //document.getElementById("back-button").addEventListener('touchstart', handleBackStart);
 
-
     document.getElementById("films").addEventListener('change', function() {
         if(document.getElementById("films").value.includes("Ilford") ||
             document.getElementById("films").value.includes("Tri-X") ||
             document.getElementById("films").value.includes("T-Max"))
             makeGray();
     });
-    
-    document.getElementById("userName").style.width = width*.85 - 8 + "px";
-    document.getElementById("lname").style.width = width*.85 - 8 + "px";
-    document.getElementById("films").style.width = width*.85 - 8 + "px";
-    document.getElementById("iso").style.width = width*.85 - 8 + "px";
-    document.getElementById("shutterspeed").style.width = width*.85 - 8 + "px";
-    document.getElementById("aperture").style.width = width*.85 - 8 + "px";
+
+    document.getElementById("userName").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("lname").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("films").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("iso").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("shutterspeed").style.width = window.innerWidth*.85 - 8 + "px";
+    document.getElementById("aperture").style.width = window.innerWidth*.85 - 8 + "px";
 
     innerH = window.innerHeight;
     
