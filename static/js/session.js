@@ -236,12 +236,12 @@ function makeGray(){
 }
 
 function reportWindowSize() {
-    document.getElementById('rootElement').style.visibility = "hidden";
+    document.getElementById('rootElement').style.display = "none";
     if(window.innerHeight > innerH){
-        document.getElementById('rootElement').style.visibility = "hidden";
+        document.getElementById('rootElement').style.display = "none";
     }
     else{
-        document.getElementById('rootElement').style.visibility = "visible";
+        document.getElementById('rootElement').style.display = "block";
     }
 }
   
