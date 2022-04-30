@@ -236,6 +236,7 @@ function makeGray(){
 }
 
 function reportWindowSize() {
+    document.getElementById('rootElement').style.visibility = "hidden";
     if(window.innerHeight > innerH){
         document.getElementById('rootElement').style.visibility = "hidden";
     }
