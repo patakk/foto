@@ -194,16 +194,6 @@ function animationLoop(){
         if(!canvasRect)
             canvasRect = canvas.getBoundingClientRect();
     
-        if(window.innerHeight < innerH){
-            canvas.style.display = "none";
-            snapLabel.style.display = "none";
-            saveLabel.style.display = "none";
-        }
-        else{
-            canvas.style.display = "inline-block";
-            snapLabel.style.display = "inline-block";
-            saveLabel.style.display = "inline-block";
-        }
 
         //snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
         var snapRect = snapLabel.getBoundingClientRect();
