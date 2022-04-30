@@ -191,9 +191,9 @@ function animationLoop(){
     
         document.getElementById("lname").value = displayDefault;
         if(window.innerHeight < innerH){
-            canvas.style.display = "none";
-            snapLabel.style.display = "none";
-            saveLabel.style.display = "none";
+            canvas.style.display = "inline";
+            snapLabel.style.display = "inline";
+            saveLabel.style.display = "inline";
         }
         else{
             canvas.style.display = "inline";
