@@ -85,7 +85,9 @@ function takepicture() {
             photo = document.getElementById('photo');
         }
         context.drawImage(video, 0, -460, 480, 640+460); 
-        if(document.getElementById("films").value.includes("Ilford"))
+        if(document.getElementById("films").value.includes("Ilford") ||
+            document.getElementById("films").value.includes("Tri-X") ||
+            document.getElementById("films").value.includes("T-Max"))
             makeGray();
         //var data = canvas.toDataURL('image/png');
         //photo.setAttribute('src', data);
@@ -244,8 +246,8 @@ $(document).ready(function(){
 
     document.getElementById("films").addEventListener('change', function() {
         if(document.getElementById("films").value.includes("Ilford") ||
-        document.getElementById("films").value.includes("Tri-X") ||
-        document.getElementById("films").value.includes("T-Max"))
+            document.getElementById("films").value.includes("Tri-X") ||
+            document.getElementById("films").value.includes("T-Max"))
             makeGray();
     });
 
