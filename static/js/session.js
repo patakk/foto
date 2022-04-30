@@ -243,7 +243,9 @@ $(document).ready(function(){
     //document.getElementById("back-button").addEventListener('touchstart', handleBackStart);
 
     document.getElementById("films").addEventListener('change', function() {
-        if(document.getElementById("films").value.includes("Ilford"))
+        if(document.getElementById("films").value.includes("Ilford") ||
+        document.getElementById("films").value.includes("Tri-X") ||
+        document.getElementById("films").value.includes("T-Max") ||)
             makeGray();
     });
 
