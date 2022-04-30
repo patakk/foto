@@ -181,19 +181,6 @@ function animationLoop(){
         timer = timer - 33;
     }
     
-    if(!displayDefault)
-        displayDefault = canvas.style.display;
-
-    if(window.innerHeight < innerH){
-        canvas.style.display = "none";
-        snapLabel.style.display = "none";
-        saveLabel.style.display = "none";
-    }
-    else{
-        canvas.style.display = displayDefault;
-        snapLabel.style.display = displayDefault;
-        saveLabel.style.display = displayDefault;
-    }
   
     width = window.innerWidth;
     height = window.innerWidth*3/4;
@@ -201,6 +188,20 @@ function animationLoop(){
     try{
         if(!canvasRect)
             canvasRect = canvas.getBoundingClientRect();
+
+        if(!displayDefault)
+            displayDefault = canvas.style.display;
+    
+        if(window.innerHeight < innerH){
+            canvas.style.display = "none";
+            snapLabel.style.display = "none";
+            saveLabel.style.display = "none";
+        }
+        else{
+            canvas.style.display = displayDefault;
+            snapLabel.style.display = displayDefault;
+            saveLabel.style.display = displayDefault;
+        }
 
         snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
         var snapRect = snapLabel.getBoundingClientRect();
