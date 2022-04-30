@@ -21,7 +21,7 @@
             <!-- For loop logic of jinja template -->
             {%for i in range(0, rollslen)%}
                 <li id="{{rolls[i]}}" onclick="handleRollClick(event)">
-                    <p>
+                    <p id="{{rolls[i]}}" onclick="handleRollClick(event)">
                         {{rolls[i]}}
                     </p>
                 </li>
