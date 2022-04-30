@@ -16,16 +16,11 @@ body {
     border: 4px solid #EEEEEE;
     border-radius: 0px;
     margin: 0px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 12px;
-    padding-bottom: 12px;
     text-align: center;
     z-index: +1000;
     overflow: hidden;
     width: 100%;
 }
-
 
 
 video {
