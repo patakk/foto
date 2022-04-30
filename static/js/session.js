@@ -11,6 +11,7 @@ var innerH = null;
 var timer = 0;
 var snapsnap = false;
 var canvasRect;
+var displayDefault;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -180,12 +181,18 @@ function animationLoop(){
         timer = timer - 33;
     }
     
+    if(!displayDefault)
+        displayDefault = canvas.style.display;
+
     if(window.innerHeight < innerH){
         canvas.style.display = "none";
         snapLabel.style.display = "none";
         saveLabel.style.display = "none";
     }
     else{
+        canvas.style.display = displayDefault;
+        snapLabel.style.display = displayDefault;
+        saveLabel.style.display = displayDefault;
     }
   
     width = window.innerWidth;
