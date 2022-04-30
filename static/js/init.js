@@ -36,9 +36,7 @@ function preventBehavior(e) {
 
 function reportWindowSize() {
     if(window.innerWidth > window.innerHeight){
-        sessionLabel.style.color = "#373737";
-        sessionLabel.style.borderColor = "#373737";
-        sessionLabel.style.background = "#121212";
+        window.location.href='/foto/preview';
     }
     else{
     }
