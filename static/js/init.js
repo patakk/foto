@@ -42,7 +42,11 @@ function animationLoop(){
     previewLabel.addEventListener('touchend', handlePreviewEnd);
     previewLabel.addEventListener('mousedown', handlePreviewStart);
     previewLabel.addEventListener('mouseup', handlePreviewEnd);
-    window.requestAnimationFrame(animationLoop);
+
+    sessionLabel.style.visibility = "visible";
+    previewLabel.style.visibility = "visible";
+
+window.requestAnimationFrame(animationLoop);
 }
        
 function preventBehavior(e) {
