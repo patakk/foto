@@ -117,7 +117,7 @@ function handleSnapEnd(){
     //} );
     if(!snap){
         snapLabel.style.background = "#101010";
-        snapLabel.innerHTML = 'NEW FRAME';
+        snapLabel.innerHTML = '&nbsp;NEW FRAME';
         snapsnap = false;
     }
     else{
@@ -158,7 +158,7 @@ function animationLoop(){
         if(snap){
             saveLabel.style.background = "#101010";
             snapLabel.style.background = "#101010";
-            snapLabel.innerHTML = 'NEW FRAME'
+            snapLabel.innerHTML = '&nbsp;NEW FRAME'
         }
         else{
             saveLabel.style.background = "#777777";
@@ -206,6 +206,7 @@ function animationLoop(){
         var snapRect = snapLabel.getBoundingClientRect();
         snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
         snapLabel.style.position = "absolute";
+        snapLabel.style.width = "200px";
         
         form.style.left = width*.075 + "px";
         form.style.top = snapRect["bottom"] + innerH*0.02 + "px";
