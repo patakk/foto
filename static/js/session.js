@@ -180,7 +180,7 @@ function animationLoop(){
     else{
         timer = timer - 33;
     }
-
+  
     width = window.innerWidth;
     height = window.innerWidth*3/4;
 
@@ -191,6 +191,17 @@ function animationLoop(){
         if(!displayDefault)
             displayDefault = canvas.style.display;
     
+        if(window.innerHeight < innerH){
+            canvas.style.display = "none";
+            snapLabel.style.display = "none";
+            saveLabel.style.display = "none";
+            form.style.bottom = "20px";
+        }
+        else{
+            canvas.style.display = displayDefault;
+            snapLabel.style.display = displayDefault;
+            saveLabel.style.display = displayDefault;
+        }
 
         snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
         var snapRect = snapLabel.getBoundingClientRect();
