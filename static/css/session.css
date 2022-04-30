@@ -16,26 +16,14 @@ body {
     border: 4px solid #EEEEEE;
     border-radius: 0px;
     margin: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-align: center;
     z-index: +1000;
     overflow: hidden;
-}
-
-.mylabel {
-    overflow: hidden;
-    font-family: "Roboto Mono", sans-serif;
-    font-size: 16px;
-    color: #EEEEEE;
-    background: #101010;
-    border: 4px solid #EEEEEE;
-    border-radius: 0px;
-    margin: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    text-align: center;
-    z-index: +1000;
+    width: 100%;
 }
 
 
