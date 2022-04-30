@@ -155,7 +155,6 @@ function animationLoop(){
     var width, height, rect;
 
     if(timer <= 0){
-        snap = false;
         if(snap){
             saveLabel.style.background = "#121212";
             //snapLabel.style.background = "#121212";
