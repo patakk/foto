@@ -70,8 +70,8 @@ function takepicture() {
             canvas = document.getElementById('canvas');
             canvas.width = 480;
             canvas.height = 640;
-            //canvas.style.width = width*.85 + "px";
-            //canvas.style.height = height*.85 + "px";
+            canvas.style.width = width*.85 + "px";
+            canvas.style.height = height*.85 + "px";
             //canvas.style.left = width*(1-.85)/2 + "px";
             //canvas.style.top = height*(1-.85)/2 + "px";
             context = canvas.getContext('2d');
