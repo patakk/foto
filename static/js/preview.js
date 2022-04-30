@@ -58,7 +58,7 @@ function reportWindowSize() {
     submitLabel.addEventListener('mouseup', handleSubmitEnd);
     
     submitLabel.style.visibility = "visible";
-    nameLabel.style.visibility = "visible";
+    form.style.visibility = "visible";
 
     if(window.innerWidth > window.innerHeight){
         document.getElementById('rootElement').style.width = "800px";
