@@ -236,13 +236,11 @@ function makeGray(){
 }
 
 function reportWindowSize() {
-    if(window.innerWidth > window.innerHeight){
-        document.getElementById('rootElement').style.width = "800px";
-        document.getElementById('rootElement').style.margin = "auto";
+    if(window.innerHeight > innerH){
+        document.getElementById('rootElement').style.visibility = "hidden";
     }
     else{
-        document.getElementById('rootElement').style.width = "100%";
-        document.getElementById('rootElement').style.margin = "0px";
+        document.getElementById('rootElement').style.visibility = "visibiliy";
     }
 }
   
