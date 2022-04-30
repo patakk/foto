@@ -243,6 +243,8 @@ $(document).ready(function(){
     //document.getElementById("back-button").addEventListener('touchstart', handleBackStart);
 
     document.getElementById("films").addEventListener('change', function() {
+        if(document.getElementById("films").value.includes("Ilford"))
+            makeGray();
     });
 
     innerH = window.innerHeight;
