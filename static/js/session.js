@@ -46,14 +46,6 @@ function requestSave(data_uri){
             method : 'POST',
             url : '/foto/save_info',
             success: function(resp) {
-
-                if(resp["message"]){
-                    saveLabel.style.background = "#20CCAA";
-                    saveLabel.style.color = "#FFFFFF";
-                    saveLabel.innerHTML = "&nbsp;&nbsp;SAVED!&nbsp;&nbsp;";
-                    timer = 1300;
-                    snap = false;
-                }
                 //var table = document.getElementById("model-table");
                 //var row = table.insertRow(0);
                 //var cell = row.insertCell(0);
@@ -114,7 +106,7 @@ function handleSaveStart(){
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "&nbsp;SAVING...";
-    timer = 10000;
+    timer = 600;
 }
 
 function handleSnapEnd(){
@@ -178,6 +170,16 @@ function animationLoop(){
         saveLabel.innerHTML = "&nbsp;&nbsp;&nbsp;SAVE&nbsp;&nbsp;&nbsp;";
     }
     else{
+        if(timer > 300){
+            saveLabel.style.background = "#2080FF";
+            saveLabel.style.color = "#FFFFFF"; 
+            saveLabel.innerHTML = "&nbsp;SAVING...";
+        }
+        else{
+            saveLabel.style.background = "#20CCAA";
+            saveLabel.style.color = "#FFFFFF";
+            saveLabel.innerHTML = "&nbsp;&nbsp;SAVED!&nbsp;&nbsp;";
+        }
         timer = timer - 33;
     }
 
@@ -286,7 +288,6 @@ $(document).ready(function(){
     Webcam.attach( '#player' );
     
     document.getElementById('player').style.opacity = 0;
-    document.getElementById('rootElement').addEventListener('focusout', function(e) {window.scrollTo(0, 330)});
 
     window.requestAnimationFrame(animationLoop);
     //var path = document.getElementById('img').src;
