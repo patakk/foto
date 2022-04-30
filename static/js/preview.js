@@ -19,6 +19,16 @@ function handleSubmitEnd(){
 
 function animationLoop(){
     
+}
+       
+function preventBehavior(e) {
+    e.preventDefault(); 
+}; 
+
+
+function reportWindowSize() {
+
+    
     form = document.getElementById("form");
     nameLabel = document.getElementById("userName");
     submitLabel = document.getElementById("submit-button");
@@ -46,17 +56,26 @@ function animationLoop(){
     
     submitLabel.addEventListener('mousedown', handleSubmitStart);
     submitLabel.addEventListener('mouseup', handleSubmitEnd);
-    window.requestAnimationFrame(animationLoop);
-}
-       
-function preventBehavior(e) {
-    e.preventDefault(); 
-}; 
-$(document).ready(function(){
-    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
-        
 
-    window.requestAnimationFrame(animationLoop);
+    if(window.innerWidth > window.innerHeight){
+        document.getElementById('rootElement').style.width = "800px";
+        document.getElementById('rootElement').style.margin = "auto";
+    }
+    else{
+        document.getElementById('rootElement').style.width = "100%";
+        document.getElementById('rootElement').style.margin = "0px";
+    }
+  }
+  
+
+
+$(document).ready(function(){
+        
+    document.addEventListener("touchmove", preventBehavior, {passive: false}); 
+
+    window.onresize = reportWindowSize;
+
+    reportWindowSize();
 
     //var path = document.getElementById('img').src;
     //var ext = path.slice(path.length-3, path.length);
