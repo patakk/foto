@@ -180,7 +180,7 @@ function animationLoop(){
         timer = timer - 33;
     }
     
-    if(window.innerHeight > innerH){
+    if(window.innerHeight < innerH){
         document.getElementById('rootElement').style.display = "none";
     }
     else{
