@@ -155,9 +155,6 @@ function animationLoop(){
 
     var width, height, rect;
 
-    var userName = document.getElementById("userName").value;
-    var rollName = document.getElementById("lname").value;
-    saveLabel.innerHTML = userName + " " + userName;
     if(timer <= 0){
         if(snap){
             saveLabel.style.background = "#121212";
@@ -190,6 +187,9 @@ function animationLoop(){
         timer = timer - 33;
     }
 
+    var userName = document.getElementById("userName").value;
+    var rollName = document.getElementById("lname").value;
+    saveLabel.innerHTML = userName + " " + userName;
   
     width = window.innerWidth;
     height = window.innerWidth*3/4;
