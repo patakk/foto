@@ -158,15 +158,16 @@ function animationLoop(){
         if(snap){
             saveLabel.style.background = "#121212";
             //snapLabel.style.background = "#121212";
+        saveLabel.style.color = "#FFFFFF"; 
             snapLabel.innerHTML = 'NEW FRAME'
         }
         else{
-            saveLabel.style.background = "#777777";
+            //saveLabel.style.background = "#777777";
+            saveLabel.style.color = "#373737";
             //snapLabel.style.background = "#121212";
             snapLabel.innerHTML = 'SHOOT!'
             snapsnap = true;
         }
-        saveLabel.style.color = "#FFFFFF"; 
         saveLabel.innerHTML = "SAVE";
     }
     else{
