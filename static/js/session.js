@@ -206,8 +206,8 @@ function animationLoop(){
         var snapRect = snapLabel.getBoundingClientRect();
         //snapLabel.style.left = window.innerWidth*0.5 - snapRect["width"]/2;
         //snapLabel.style.position = "absolute";
-        snapLabel.style.width = "calc(100% - 4px)";
-        saveLabel.style.width = "calc(100% - 4px)";
+        snapLabel.style.width = "calc(100% - 0px)";
+        saveLabel.style.width = "calc(100% - 0px)";
         
         //form.style.left = width*.075 + "px";
         //form.style.top = snapRect["bottom"] + innerH*0.02 + "px";
