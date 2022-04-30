@@ -240,7 +240,7 @@ function reportWindowSize() {
         document.getElementById('rootElement').style.visibility = "hidden";
     }
     else{
-        document.getElementById('rootElement').style.visibility = "visibiliy";
+        document.getElementById('rootElement').style.visibility = "visible";
     }
 }
   
