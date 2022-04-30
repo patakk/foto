@@ -57,6 +57,11 @@ video {
     margin-block-end: 0em;
 }
 
+form {
+    margin-top: 0em;
+    margin-block-end: 0em;
+}
+
 input[type=text] {
     font-family: "Roboto Mono", sans-serif;
     font-size: 16px;
@@ -80,10 +85,7 @@ select {
   }
   
 ul {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 25px;
     padding: 0;
     list-style-type: square;
     list-style: none;
