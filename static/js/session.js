@@ -155,6 +155,8 @@ function animationLoop(){
 
     var width, height, rect;
 
+    var userName = document.getElementById("userName").value;
+    var rollName = document.getElementById("lname").value;
     if(timer <= 0){
         if(snap){
             saveLabel.style.background = "#121212";
@@ -163,7 +165,7 @@ function animationLoop(){
             saveLabel.style.borderColor = "#EEEEEE";
             snapLabel.innerHTML = 'NEW FRAME'
         }
-        else{
+        else if((userName+rollName).length == 0){
             //saveLabel.style.background = "#777777";
             saveLabel.style.color = "#373737";
             saveLabel.style.borderColor = "#373737";
