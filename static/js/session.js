@@ -230,13 +230,6 @@ function animationLoop(){
     }
 
 
-    document.getElementById("userName").style.width = width*.85 - 8 + "px";
-    document.getElementById("lname").style.width = width*.85 - 8 + "px";
-    document.getElementById("films").style.width = width*.85 - 8 + "px";
-    document.getElementById("iso").style.width = width*.85 - 8 + "px";
-    document.getElementById("shutterspeed").style.width = width*.85 - 8 + "px";
-    document.getElementById("aperture").style.width = width*.85 - 8 + "px";
-
     if(!snap && snapsnap)
         takepicture();
     
@@ -275,12 +268,20 @@ $(document).ready(function(){
 
     //document.getElementById("back-button").addEventListener('touchstart', handleBackStart);
 
+
     document.getElementById("films").addEventListener('change', function() {
         if(document.getElementById("films").value.includes("Ilford") ||
             document.getElementById("films").value.includes("Tri-X") ||
             document.getElementById("films").value.includes("T-Max"))
             makeGray();
     });
+    
+    document.getElementById("userName").style.width = width*.85 - 8 + "px";
+    document.getElementById("lname").style.width = width*.85 - 8 + "px";
+    document.getElementById("films").style.width = width*.85 - 8 + "px";
+    document.getElementById("iso").style.width = width*.85 - 8 + "px";
+    document.getElementById("shutterspeed").style.width = width*.85 - 8 + "px";
+    document.getElementById("aperture").style.width = width*.85 - 8 + "px";
 
     innerH = window.innerHeight;
     
