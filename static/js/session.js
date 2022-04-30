@@ -181,7 +181,7 @@ function animationLoop(){
         timer = timer - 33;
     }
 
-    snapLabel.innerHTML = displayDefault;
+    snapLabel.innerHTML = canvas.style.display;
     
   
     width = window.innerWidth;
