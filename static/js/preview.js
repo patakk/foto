@@ -37,6 +37,8 @@ function animationLoop(){
     submitLabel.style.position = "absolute";
     submitLabel.style.left = width*.075 + "px";
     submitLabel.style.top = formRect['bottom'] + "px";
+
+
     //submitLabel.style.width = width*.85 - 8 + "px";
 
     submitLabel.addEventListener('touchstart', handleSubmitStart);
