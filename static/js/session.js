@@ -95,7 +95,7 @@ function takepicture() {
         //photo.setAttribute('src', data);
     }
     catch(err) {
-        document.getElementById("message").innerHTML = err.message;
+        //document.getElementById("message").innerHTML = err.message;
     }
   }
 
@@ -221,7 +221,7 @@ function animationLoop(){
         //document.getElementById("back-button").style.left = "10px";
     }
     catch(err) {
-        document.getElementById("message").innerHTML = err.message;
+        //document.getElementById("message").innerHTML = err.message;
     }
 
 
