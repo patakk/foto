@@ -245,7 +245,7 @@ $(document).ready(function(){
     document.getElementById("films").addEventListener('change', function() {
         if(document.getElementById("films").value.includes("Ilford") ||
         document.getElementById("films").value.includes("Tri-X") ||
-        document.getElementById("films").value.includes("T-Max") ||)
+        document.getElementById("films").value.includes("T-Max"))
             makeGray();
     });
 
