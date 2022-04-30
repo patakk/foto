@@ -13,8 +13,8 @@ function handleSubmitEnd(){
 
     var userName = document.getElementById("userName").value;
 
-    
-    window.location.href = '/foto/preview?userName=' + userName;
+    if(value.length > 0)
+        window.location.href = '/foto/preview?userName=' + userName;
 }
 
 function animationLoop(){
