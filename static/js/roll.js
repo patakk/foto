@@ -9,7 +9,7 @@ function preventBehavior(e) {
 
 function reportWindowSize() {
     if(window.innerWidth > window.innerHeight){
-        document.getElementById('rootElement').style.width = "100%";
+        document.getElementById('rootElement').style.width = "800px";
         document.getElementById('rootElement').style.margin = "auto";
     }
     else{
@@ -26,7 +26,7 @@ $(document).ready(function(){
     window.onresize = reportWindowSize;
 
     if(window.innerWidth > window.innerHeight){
-        document.getElementById('rootElement').style.width = "100%";
+        document.getElementById('rootElement').style.width = "800px";
         document.getElementById('rootElement').style.margin = "auto";
     }
     else{
