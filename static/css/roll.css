@@ -8,7 +8,6 @@ body {
 ul, ol, a {
     font-size: 18px;
     color: #EEEEEE;
-    list-style-position: inside;
 }
 
 .txt {
