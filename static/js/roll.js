@@ -3,6 +3,10 @@ function goBack() {
     window.location.href = '/foto/preview?userName=' + userName;
 }
 
+function preventBehavior(e) {
+    e.preventDefault(); 
+};
+
 
 $(document).ready(function(){
     document.addEventListener("touchmove", preventBehavior, {passive: false}); 
