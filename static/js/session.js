@@ -93,7 +93,7 @@ function takepicture() {
 
   function handleSnapStart(){
     snapLabel.style.background = "#FFFFFF";
-    snapLabel.style.color = "#121212";
+    snapLabel.style.color = "#FF0000";
 }
 
 function handleBackStart(){
