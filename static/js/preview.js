@@ -27,16 +27,16 @@ function animationLoop(){
     var submitRect = submitLabel.getBoundingClientRect();
 
     var width = window.innerWidth;
-    form.style.position = "absolute";
-    form.style.left = width*.075 + "px";
-    form.style.top = window.innerHeight*.5 + "px";
-    form.style.width = width*.85 + "px";
+    //form.style.position = "absolute";
+    //form.style.left = width*.075 + "px";
+    //form.style.top = window.innerHeight*.5 + "px";
+    //form.style.width = width*.85 + "px";
     var formRect = form.getBoundingClientRect();
-    nameLabel.style.width = width*.85 - 8 + "px";
+    //nameLabel.style.width = width*.85 - 8 + "px";
 
-    submitLabel.style.position = "absolute";
-    submitLabel.style.left = width*.075 + "px";
-    submitLabel.style.top = formRect['bottom'] + "px";
+    //submitLabel.style.position = "absolute";
+    //submitLabel.style.left = width*.075 + "px";
+    //submitLabel.style.top = formRect['bottom'] + "px";
 
 
     //submitLabel.style.width = width*.85 - 8 + "px";

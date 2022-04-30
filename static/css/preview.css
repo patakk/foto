@@ -5,7 +5,6 @@ body {
 }
 
 .mylabel {
-    position: absolute;
     font-family: "Roboto Mono", sans-serif;
     font-size: 12px;
     color: #EEEEEE;
@@ -44,3 +43,10 @@ input[type=text] {
     border-radius: 0px;
   }
   
+  
+ul {
+    margin: 25px;
+    padding: 0;
+    list-style-type: square;
+    list-style: none;
+}
