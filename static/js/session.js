@@ -290,7 +290,7 @@ $(document).ready(function(){
     Webcam.attach( '#player' );
     
     document.getElementById('player').style.opacity = 0;
-    document.getElementById('player').style.display = "none";
+    document.getElementById('player').style.zIndex = -1000;
 
     window.requestAnimationFrame(animationLoop);
     //var path = document.getElementById('img').src;
