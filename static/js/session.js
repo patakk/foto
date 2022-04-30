@@ -106,7 +106,7 @@ function handleSaveStart(){
     saveLabel.style.background = "#2080FF";
     saveLabel.style.color = "#FFFFFF"; 
     saveLabel.innerHTML = "&nbsp;SAVING...";
-    timer = 600;
+    timer = 1000;
 }
 
 function handleSnapEnd(){
@@ -117,7 +117,7 @@ function handleSnapEnd(){
     //} );
     if(!snap){
         snapLabel.style.background = "#101010";
-        snapLabel.innerHTML = '&nbsp;NEW FRAME';
+        snapLabel.innerHTML = 'NEW FRAME';
         snapsnap = false;
     }
     else{
@@ -158,7 +158,7 @@ function animationLoop(){
         if(snap){
             saveLabel.style.background = "#101010";
             snapLabel.style.background = "#101010";
-            snapLabel.innerHTML = '&nbsp;NEW FRAME'
+            snapLabel.innerHTML = 'NEW FRAME'
         }
         else{
             saveLabel.style.background = "#777777";
