@@ -11,7 +11,7 @@ var innerH = null;
 var timer = 0;
 var snapsnap = false;
 var canvasRect;
-var displayDefault;
+var displayDefault = null;
 
 function preventBehavior(e) {
     e.preventDefault(); 
