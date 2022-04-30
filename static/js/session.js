@@ -180,8 +180,7 @@ function animationLoop(){
     else{
         timer = timer - 33;
     }
-    
-  
+
     width = window.innerWidth;
     height = window.innerWidth*3/4;
 
