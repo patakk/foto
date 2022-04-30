@@ -12,6 +12,9 @@ function reportWindowSize() {
         console.log("aaa")
         document.getElementById('rootElement').style.width = "800px";
     }
+    else{
+        document.getElementById('rootElement').style.width = "100%";
+    }
   }
   
 
@@ -24,6 +27,9 @@ $(document).ready(function(){
 
     if(window.innerWidth > window.innerHeight){
         document.getElementById('rootElement').style.width = "800px";
+    }
+    else{
+        document.getElementById('rootElement').style.width = "100%";
     }
 
     //var path = document.getElementById('img').src;
