@@ -90,3 +90,7 @@ ul {
     list-style: none;
     column-gap: 0px;
 }
+
+.mainList {
+    margin-bottom: 25px;
+}
