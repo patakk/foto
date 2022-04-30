@@ -95,3 +95,7 @@ ul {
 .mainList {
     margin-bottom: 25px;
 }
+
+option {
+    color: #101010;
+}
