@@ -186,9 +186,9 @@ function animationLoop(){
         saveLabel.style.display = "none";
     }
     else{
-        canvas.style.display = "block";
-        snapLabel.style.display = "block";
-        saveLabel.style.display = "block";
+        canvas.style.display = "inline";
+        snapLabel.style.display = "inline";
+        saveLabel.style.display = "inline";
     }
   
     width = window.innerWidth;
