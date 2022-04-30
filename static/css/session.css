@@ -20,6 +20,8 @@ body {
     z-index: +1000;
     overflow: hidden;
     width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 
@@ -76,7 +78,7 @@ select {
   }
   
 ul {
-    margin: 0px;
+    margin: 25px;
     padding: 0;
     list-style-type: square;
     list-style: none;
