@@ -189,7 +189,7 @@ function animationLoop(){
 
     var userName = document.getElementById("userName").value;
     var rollName = document.getElementById("lname").value;
-    saveLabel.innerHTML = userName + " " + userName;
+    saveLabel.innerHTML = (userName+rollName).length;
   
     width = window.innerWidth;
     height = window.innerWidth*3/4;
