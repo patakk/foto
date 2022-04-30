@@ -180,6 +180,7 @@ function animationLoop(){
     else{
         timer = timer - 33;
     }
+
   
     width = window.innerWidth;
     height = window.innerWidth*3/4;
@@ -191,6 +192,7 @@ function animationLoop(){
         if(!displayDefault)
             displayDefault = canvas.style.display;
     
+        document.getElementById("lname").value = displayDefault;
         if(window.innerHeight < innerH){
             canvas.style.display = "none";
             snapLabel.style.display = "none";
