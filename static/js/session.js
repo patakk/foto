@@ -195,6 +195,7 @@ function animationLoop(){
             canvas.style.display = "none";
             snapLabel.style.display = "none";
             saveLabel.style.display = "none";
+            form.style.bottom = "20px";
         }
         else{
             canvas.style.display = displayDefault;
