@@ -156,7 +156,6 @@ if (hasGetUserMedia()) {
 
 function animationLoop(){
     
-    snapLabel.innerHTML = window.innerHeight;
     //innerH = window.innerHeight;
     document.getElementById("rootElement").style.height = innerH + "px";
 
@@ -180,6 +179,7 @@ function animationLoop(){
     else{
         timer = timer - 33;
     }
+    snapLabel.innerHTML = window.innerHeight;
   
 
     width = window.innerWidth;
