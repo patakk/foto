@@ -10,6 +10,7 @@ var form = null;
 var innerH = null;
 var timer = 0;
 var snapsnap = false;
+var canvasRect;
 
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -183,7 +184,8 @@ function animationLoop(){
     height = window.innerWidth*3/4;
 
     try{
-        var canvasRect = canvas.getBoundingClientRect();
+        if(!canvasRect)
+            canvasRect = canvas.getBoundingClientRect();
 
         snapLabel.style.top = canvasRect['bottom']*1. + innerH*0.02 + "px";
         var snapRect = snapLabel.getBoundingClientRect();
