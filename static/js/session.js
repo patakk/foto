@@ -158,6 +158,8 @@ function animationLoop(){
     var userName = document.getElementById("userName").value;
     var rollName = document.getElementById("lname").value;
 
+    snapLabel.style.visiblity = "visible";
+    saveLabel.style.visiblity = "visible";
     if(timer <= 0){
         if(snap && userName.length > 0 && rollName.length > 0){
             saveLabel.style.background = "#121212";
@@ -257,12 +259,10 @@ $(document).ready(function(){
     snapLabel = document.getElementById("snap-button");
     snapLabel.addEventListener('touchstart', handleSnapStart);
     snapLabel.addEventListener('touchend', handleSnapEnd);
-    snapLabel.style.visiblity = "visible";
     
     saveLabel = document.getElementById("save-button");
     saveLabel.addEventListener('touchstart', handleSaveStart);
     saveLabel.addEventListener('touchend', handleSaveEnd);
-    saveLabel.style.visiblity = "visible";
 
     //document.getElementById("back-button").addEventListener('touchstart', handleBackStart);
 
