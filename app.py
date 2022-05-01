@@ -10,11 +10,6 @@ import glob
 import json
 from PIL import Image
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import scoped_session, sessionmaker
-
-engine = create_engine("mysql://patakk_main:La9WVNyD@localhost:3306/patakk_foto")
-
 app = Flask(__name__)
 application = app
 
